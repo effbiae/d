@@ -9,6 +9,7 @@ c uses k.edu and parserclub repos.
 ### get, build and run
 ```
 $ git clone --recursive https://github.com/effbiae/c.git   #recursive to get the k.edu and parserclub submodules
+$ cd c
 $ make
 $ c
  !3
