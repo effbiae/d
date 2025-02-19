@@ -1,8 +1,8 @@
 ### c compiles k
 - c is a front end for [shakti](https://shakti.com/)'s k.edu
 - c uses shakti's fast k.edu core for primitives
-- replaces z.c
-
+- c replaces z.c
+### get, build and run
 ```
 $ git clone --recursive https://github.com/effbiae/c.git   #recursive to get the k.edu and parserclub submodules
 $ make
