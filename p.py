@@ -21,7 +21,7 @@ def E(x):
  return x
 def t():
  #T t(){P(q(),tn(0));T x='('-s[i]?n():3>(J)count(x=E(A(s[i])))?A(x[1]):x;W('a'==c[s[i]])x='['==s[i]?E(x):t2(n(),x);R x;}
- global s,i 
+ global s,i
  if q():return tn(0)
  x=n() if b'('[0]-s[i] else (x if (3>len(x:=E(s[i]))) else x[1])
  while b'a'[0]==c[s[i]]:
@@ -40,6 +40,4 @@ def rs(x,f):
  if type(x) is type([]):return [rs(a,f) for a in x]
  return f(x)
 if __name__=='__main__':
- import sys
- print(rs(c,chr))
  print([rs(parse(x.strip()),chr) for x in sys.stdin.readlines()])
