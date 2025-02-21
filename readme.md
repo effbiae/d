@@ -8,10 +8,10 @@
 $ git clone --recursive https://github.com/effbiae/c.git   #recursive to get the k.edu submodule
 $ cd c
 $ make
-$ c
+$ ./c
  !3
 0 1 2
 $ echo '*/1+!3'>t.k
-$ c t.k
+$ ./c t.k
 6
 ```
