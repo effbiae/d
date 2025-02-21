@@ -1,6 +1,3 @@
 [submodule "k.edu"]
 	path = k.edu
 	url = https://github.com/effbiae/k.edu.git
-[submodule "parserclub"]
-	path = parserclub
-	url = https://github.com/kparc/parserclub.git
