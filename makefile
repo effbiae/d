@@ -3,7 +3,7 @@ c:a.o t.o c.c makefile
 	$C -O -oc t.o c.c
 a.o:k.edu/a.c makefile
 	$C -Ofast -oa.o -c $< -nostdlib -s -w -march=icelake-client -funsigned-char -fno-unwind-tables -mavx512f -mavx512dq -mavx512vbmi
-	cd k.edu;for x in _ a;do ln $x.h k.edu/$x.h; done
+	cd k.edu;for x in _ a;do ln -s $$x.h ../$$x.h; done
 t.o:parserclub/t.c makefile
 	$C -O -Dmain=tmain -c ot.o $<&&ln parserclub/t.h t.h
 t.k:
