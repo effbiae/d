@@ -26,8 +26,8 @@ def e(x):
  if q():return x
  v_=v();f=t();return [f,x,e(t())]if v()>v_ else [x,e(f)]
 def parse(x):
- global s,i;s=b'('+bytes(x,'utf-8')+b'\0';i=0;r=t()
- if type(r)is type([])and x[0]!='('and r[0]==b'('[0]:r[0]=b'['[0]
+ global s,i;s=b'('+bytes(x,'utf-8')+b'\0';i=0;r=t();r=rs(r,chr)
+ if type(r)is type([])and x[0]!='('and r[0]=='(':r[0]='['
  return r
 def rs(x,f):
  if type(x) is type([]):return [rs(a,f) for a in x]
@@ -37,7 +37,7 @@ def test():
     if 0: #generate test cases
         print('[')
         for x in ["x;y","(x;y)","f[x;y]","x+y","x+*y","1+3*x","(+x)%y","(+/x)%#x","x+m[*i]/y"]:
-            print("[%12s,%s ],"%(repr(x),rs(parse(x),chr)))
+            print("[%12s,%s ],"%(repr(x),parse(x)))
         print(']')
     for x,y in [
         [       'x;y',['[', 'x', 'y'] ],
@@ -50,6 +50,6 @@ def test():
         [  '(+/x)%#x',['%', [['/', '+'], 'x'], ['#', 'x']] ],
         [ 'x+m[*i]/y',['+', 'x', [['/', ['m', ['*', 'i']]], 'y']] ],
         ]:
-        if (r:=rs(parse(x),chr))!=y:print('!',x,r,'!=',y);sys.exit(1)
+        if (r:=parse(x))!=y:print('!',x,r,'!=',y);sys.exit(1)
 if __name__=='__main__':
  test()
