@@ -8,5 +8,5 @@ t.k:
 t.check:
 	echo "0 1 2">t.check
 test:t.k t.check
-	python p.py
+	python3 p.py
 	./c t.k>t.out&&diff t.out t.check

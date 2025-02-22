@@ -25,7 +25,10 @@ def v():global s,i;return b';'[0]<c[s[i-1]]
 def e(x):
  if q():return x
  v_=v();f=t();return [f,x,e(t())]if v()>v_ else [x,e(f)]
-def parse(x):global s,i;s=b'('+bytes(x,'utf-8')+b'\0';i=0;return t()
+def parse(x):
+ global s,i;s=b'('+bytes(x,'utf-8')+b'\0';i=0;r=t()
+ if type(r)is type([])and x[0]!='('and r[0]==b'('[0]:r[0]=b'['[0]
+ return r
 def rs(x,f):
  if type(x) is type([]):return [rs(a,f) for a in x]
  return f(x)
@@ -37,7 +40,7 @@ def test():
             print("[%12s,%s ],"%(repr(x),rs(parse(x),chr)))
         print(']')
     for x,y in [
-        [       'x;y',['(', 'x', 'y'] ],
+        [       'x;y',['[', 'x', 'y'] ],
         [     '(x;y)',['(', 'x', 'y'] ],
         [    'f[x;y]',['f', 'x', 'y'] ],
         [       'x+y',['+', 'x', 'y'] ],
