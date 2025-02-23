@@ -15,12 +15,10 @@ k:k.edu/?.[ch] makefile
 	$C $K -ok k.edu/?.c -nostdlib $F
 _.h:
 	for x in _ a;do ln -sf k.edu/$$x.h $$x.h; done
-t.k:
-	echo "!3">t.k
 t.check:
 	echo "0 1 2">t.check
-test:t.k t.check
+test:t.check
 	python3 p.py
-	./c t.k>t.out&&diff t.out t.check
+	echo '!3'|./c>t.out&&diff t.out t.check
 clean:
 	rm *.o u _.h a.h

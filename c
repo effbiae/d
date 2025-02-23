@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from p import parse,c,rs
+from p import parse
 import sys,os
 P=os.popen('grep -o \'P=":+.*"\' k.edu/z.c').read()[3:-2];assert(P[0]==':')
 def e(x):
@@ -12,7 +12,8 @@ def e(x):
  if x in "0123456789":return "ti(%s)"%x
 f=sys.stdin
 while 1:
- print(" ",end="");sys.stdout.flush();x=f.readline()
+ if sys.stdin.isatty():print(" ",end="");sys.stdout.flush();
+ x=f.readline()
  if not x:sys.exit(0)
  g=open("g.c","w")
  x=parse(x)
