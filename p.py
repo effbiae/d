@@ -34,9 +34,9 @@ def rs(x,f):
  return f(x)
 def test():
     import sys
-    if 0: #generate test cases
+    if 1: #generate test cases
         print('[')
-        for x in ["x;y","(x;y)","f[x;y]","x+y","x+*y","1+3*x","(+x)%y","(+/x)%#x","x+m[*i]/y"]:
+        for x in ["x;y","(x;y)","f[x;y]","x+y","x+*y","1+3*x","(+x)%y","(+/x)%#x","x+m[*i]/y","(-*=)/","5(+\|)\\'"]:
             print("[%12s,%s ],"%(repr(x),parse(x)))
         print(']')
     for x,y in [
@@ -49,6 +49,8 @@ def test():
         [    '(+x)%y',['%', ['+', 'x'], 'y'] ],
         [  '(+/x)%#x',['%', [['/', '+'], 'x'], ['#', 'x']] ],
         [ 'x+m[*i]/y',['+', 'x', [['/', ['m', ['*', 'i']]], 'y']] ],
+        [    '(-*=)/',['/', ['-', ['*', '=']]] ],
+        [ '5(+\|)\\x',[['\\', [['\\', '+'], '|']], '5', 'x'] ],
         ]:
         if (r:=parse(x))!=y:print('!',x,r,'!=',y);sys.exit(1)
 if __name__=='__main__':
