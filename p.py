@@ -25,7 +25,7 @@ def t():
 def o(x):
  l=x[-1];
  if type(l)is type([]):
-  if l[0]==b('o'):return [b('o'),x]
+  if len(l)and l[0]==b('o'):return [b('o'),x]
  else:
   if (type(l)!=int) or c[l]!=b(' '):return [b('o')]+x
  return x
@@ -49,9 +49,9 @@ def rs(x,f):
  return f(x) if type(x)is type(1) else ''.join([f(a)for a in x])
 def test():
     import sys
-    if 0: #generate test cases
+    if 1: #generate test cases
         print('[')
-        for x in ["x;y","(x;y)","f[x;y]","x+y","x+*y","1+3*x","(+x)%y","(+/x)%#x","x+m[*i]/y","3*:/2","5(+\\|:)\\x"]:
+        for x in ["x;y","(x;y)","f[x;y]","x+y","x+*y","1+3*x","(+x)%y","(+/x)%#x","x+m[*i]/y","1+2-","3*:/2","5(+\\|:)\\x"]:
             print("[%12s,%s ],"%(x,parse(x)))
         print(']')
     for x,y in [

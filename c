@@ -12,12 +12,16 @@ def train(x):#just one monad to start with
  return name
 def e(x):
  def each(x):return 'each(%s,%s)'%(train(x[0][1]),e(x[1]))
- if len(x[0])==2:assert(x[0][0]=="'");return each(x)
- if x[0]=='[':return "(%s)"%[e(x) for x in x].join(",")
+ if len(x[0])==2:
+  if x[0][0]=="'":return each(x)
+  if x[0][0]=='\\':
+   if len(x)==3:#have 2 args
+    return f'niters({train(x[0][1])},{x[1]},ti({x[2]}))'
+ if x[0]=='[':return "(%s)"%",".join([e(x) for x in x])
  p=v(x[0])
  if -1<p:
-  if len(x)==2:return "k(%s, 0,%s)"%(str(p),e(x[1]))
-  if len(x)==3:return "k(%s,%s,%s)"%(str(p),e(x[1]),e(x[2]))
+  if len(x)==2:return "k(%d, 0,%s)"%(p,e(x[1]))
+  if len(x)==3:return "k(%d,%s,%s)"%(p,e(x[1]),e(x[2]))
  if x in "0123456789":return "ti(%s)"%x
 f=sys.stdin
 while 1:
@@ -26,6 +30,7 @@ while 1:
  if not x:sys.exit(0)
  g=open("g.c","w")
  x=parse(x)
+ print(x)
  g.write('#include"p.h"\n')
  main=e(x)
  for a in trains:g.write(f'U {a}{trains[a]}\n')
