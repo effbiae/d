@@ -8,26 +8,17 @@ def train(x):
  name='train'+str(abs(hash(x)))
  if type(x) is str:
   p=v(x[0]);assert(-1<p)
-  if len(x)==1:
-   trains[name]='(Ux,U y){return k(%s,x,y);}'%p
-  else:
-   assert(x[1]==':')
-   trains[name]='(Ux){return k(%s,0,x);}'%p
-  return name
+  if len(x)==1:trains[name]='(Ux,U y){return k(%s,x,y);}'%p
+  else:assert(x[1]==':');trains[name]='(Ux){return k(%s,0,x);}'%p
  else:
-  if x[0]=='o':
-   trains[name]='(Ux){return %s(%s(x));}'%(train(x[1]),train(x[2]))
-   return name
+  if x[0]=='o':trains[name]='(Ux){return %s(%s(x));}'%(train(x[1]),train(x[2]))
   else:#is a derived verb
-   assert(x[0]=='\\')
-   trains[name]='(Ux){return scan(%s,x);}'%train(x[1])
-   return name
+   assert(x[0]=='\\');trains[name]='(Ux){return scan(%s,x);}'%train(x[1])
+ return name
 def e(x):
  if len(x[0])==2:
   if x[0][0]=="'":return 'each(%s,%s)'%(train(x[0][1]),e(x[1]))
-  if x[0][0]=='\\':
-   if len(x)==3:#have 2 args
-    return f'niters({train(x[0][1])},{x[1]},{e(x[2])})'
+  if x[0][0]=='\\':assert(len(x)==3);return f'niters({train(x[0][1])},{x[1]},{e(x[2])})'
  if x[0]=='[':return "(%s)"%",".join([e(x) for x in x])
  p=v(x[0])
  if -1<p:
