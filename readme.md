@@ -13,8 +13,10 @@ $ ./c
 1 1 2 3 5 8 13 21 34 55
 ```
 ### limitations
-- tokens are single characters except for monadic verbs
-- implemented adverbs
- * iterate nf\x  eg. `3%:\3`
- * each  f'x  eg. `!:'!3`
- * scan in a train  eg. `9(+\|:)\2#1`
+```
+tokens are single characters except for monadic verbs
+implemented adverbs
+  iterate nf\x     3%:\3
+  each     f'x     !:'!3
+  scan in a train  9(+\|:)\2#1
+```
