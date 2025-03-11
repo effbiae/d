@@ -49,7 +49,7 @@ def rs(x,f):
  return f(x) if type(x)is type(1) else ''.join([f(a)for a in x])
 def test():
     import sys
-    if 1: #generate test cases
+    if 0: #generate test cases
         print('[')
         for x in ["x;y","(x;y)","f[x;y]","x+y","x+*y","1+3*x","(+x)%y","(+/x)%#x","x+m[*i]/y","1+2-","3*:/2","5(+\\|:)\\x"]:
             print("        [%12s,%s ],"%(x.__repr__(),parse(x)))
