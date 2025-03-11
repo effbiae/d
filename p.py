@@ -4,7 +4,7 @@ c=list(b';'+b' '*255)
 def f(x,s):
  for a in s:c[a]=x
 for i in range(3):f(m[0][i],m[i+1])
-def s0(i):return s[i] if type(s[i])==type(b(' ')) else s[i][0]
+def s0(i):return s[i] if type(s[i]) is int else s[i][0]
 def cs(i):return c[s0(i)]
 def n():
  global i
@@ -24,10 +24,10 @@ def t():
  return x
 def o(x):
  l=x[-1];
- if type(l)is type([]):
+ if type(l)is list:
   if len(l)and l[0]==b('o'):return [b('o'),x]
  else:
-  if (type(l)!=int) or c[l]!=b(' '):return [b('o')]+x
+  if type(l)!=int or c[l]!=b(' '):return [b('o')]+x
  return x
 def v():return b(';')<cs(i-1)
 def e(x):
@@ -45,8 +45,8 @@ def parse(x):
  if type(r)is tuple and len(r)and x[0]!='('and r[0]=='(':r=('[',)+r[1:]
  return r
 def rs(x,f):
- if type(x) is type([]):return tuple([rs(a,f) for a in x])
- return f(x) if type(x)is type(1) else ''.join([f(a)for a in x])
+ if type(x) is list:return tuple([rs(a,f) for a in x])
+ return f(x) if type(x)is int else ''.join([f(a)for a in x])
 def test():
     import sys
     if 0: #generate test cases
