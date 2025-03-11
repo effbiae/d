@@ -45,7 +45,7 @@ def parse(x):
  if type(r)is type([])and len(r)and x[0]!='('and r[0]=='(':r[0]='['
  return r
 def rs(x,f):
- if type(x) is type([]):return [rs(a,f) for a in x]
+ if type(x) is type([]):return tuple([rs(a,f) for a in x])
  return f(x) if type(x)is type(1) else ''.join([f(a)for a in x])
 def test():
     import sys
