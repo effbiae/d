@@ -1,19 +1,17 @@
 #!/usr/bin/python3
-from p import parse
-import sys,os
-P=eval(os.popen('grep -o \'P=":+.*"\' k.edu/z.c').read()[2:]);assert(P[0]==':')
-trains={}
+from p import parse;import sys,os
+P=eval(os.popen('grep -o \'P=":+.*"\' k.edu/z.c').read()[2:]);assert(P[0]==':');trains={}
 def v(x):return P.find(x)-1
 def train(x):
  name='train'+str(abs(hash(x)))
  if type(x) is str:
   p=v(x[0]);assert(-1<p)
-  if len(x)==1:trains[name]='(Ux,U y){return k(%s,x,y);}'%p
-  else:assert(x[1]==':');trains[name]='(Ux){return k(%s,0,x);}'%p
+  if len(x)==1:trains[name]='F(%s,k(%s,a,x))'%(name,p)
+  else:assert(x[1]==':');trains[name]='f(%s,k(%s,0,x))'%(name,p)
  else:
-  if x[0]=='o':trains[name]='(Ux){return %s(%s(x));}'%(train(x[1]),train(x[2]))
+  if x[0]=='o':trains[name]='f(%s,%s(%s(x)))'%(name,train(x[1]),train(x[2]))
   else:#is a derived verb
-   assert(x[0]=='\\');trains[name]='(Ux){return scan(%s,x);}'%train(x[1])
+   assert(x[0]=='\\');trains[name]='f(%s,scan(%s,x))'%(name,train(x[1]))
  return name
 def e(x):
  if len(x[0])==2:
@@ -34,7 +32,7 @@ while 1:
  x=parse(x)
  g.write('#include"p.h"\n')
  main=e(x)
- for a in trains:g.write(f'U {a}{trains[a]}\n')
+ for a in trains:g.write(f'{trains[a]}\n')
  g.write("main(){k_(0,0);print(%s);}\n"%main)
  g.close()
  os.system("make g >/dev/null && ./g")
