@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 from p import parse,train;import sys,os
-P=eval(os.popen('grep -o \'P=":+.*"\' k.edu/z.c').read()[2:]);assert(P[0]==':');trains={}
+P=eval(os.popen('grep -o \'P=":+.*"\' k.edu/z.c').read()[2:]);assert(P[0]==':');trains={};tri=0
 def v(x):return P.find(x)-1
-tri=0
 def tr(x):
  global tri;name='tr'+str(tri);tri+=1
  if type(x) is str:
@@ -16,15 +15,16 @@ def tr(x):
  return name
 def e(x):
  if train(x):print(x);return 0
- if len(x[0])==2:
-  if x[0][0]=="'":return 'each(%s,%s)'%(tr(x[0][1]),e(x[1]))
-  if x[0][0]=='\\':assert(len(x)==3);return f'niters({tr(x[0][1])},{x[1]},{e(x[2])})'
- if x[0]=='[':return "(%s)"%",".join([e(x) for x in x])
- p=v(x[0])
+ a=x[0]
+ if len(a)==2:
+  if a[0]=="'":return 'each(%s,%s)'%(tr(a[1]),e(x[1]))
+  if a[0]=='\\':assert(len(x)==3);return f'niters({tr(a[1])},{x[1]},{e(x[2])})'
+ if a=='[':return "(%s)"%",".join([e(x) for x in x])
+ p=v(a)
  if -1<p:
   if len(x)==2:return "k(%d, 0,%s)"%(p,e(x[1]))
   if len(x)==3:return "k(%d,%s,%s)"%(p,e(x[1]),e(x[2]))
- if x in "0123456789":return "ti(%s)"%x
+ return "ti(%s)"%x
 f=sys.stdin
 while 1:
  if f.isatty():print(" ",end="");sys.stdout.flush();
