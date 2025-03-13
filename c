@@ -30,9 +30,9 @@ while 1:
  if f.isatty():print(" ",end="");sys.stdout.flush();
  x=f.readline()
  if not x:sys.exit(0)
- g=open("g.c","w")
  x=parse(x)
  if main:=e(x):
+  g=open("g.c","w")
   g.write('#include"p.h"\n')
   for a in trains:g.write(f'{trains[a]}\n')
   g.write("main(){k_(0,0);print(%s);}\n"%main)
