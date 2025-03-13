@@ -4,9 +4,9 @@
 #define r0(x) k_(0,x)
 #define rx r1(x)
 #define el tn(0,0)
-g(at,k(12,x,ti(i)))F(cat,k(17,a,x))f(en,k(17,0,x))
-Oa(U x){tx==2?O("%d",ix):O("%f",ex);}O0(U x){O("(");i(nx,prin(at(i,rx));$(i+1<$,O(";")));O(")");r0(x);}
-OA(U x){P(nx==1,O(",");prin(at(0,rx)))P(!tx||!nx,O0(x));i2*a=k_(2,x);i(nx,tx==2?O("%d",a[i]):O("%f",((e2*)a)[i]);$(i+1<$,O(" ")));r0(x);}
+g(at,k(12,x,ti(i)))F(cat,k(17,a,x))f(en,k(17,0,x))static i2 omx=50;void dot(i2 n){$(n>omx,O(".."));}
+Oa(U x){tx==2?O("%d",ix):O("%f",ex);}O0(U x){O("(");i(l(nx,omx),prin(at(i,rx));$(i+1<$,O(";")));dot(nx);O(")");r0(x);}
+OA(U x){P(nx==1,O(",");prin(at(0,rx)))P(!tx||!nx,O0(x));i2*a=k_(2,x);i(l(nx,100),tx==2?O("%d",a[i]):O("%f",((e2*)a)[i]);$(i+1<$,O(" ")));dot(nx);r0(x);}
 prin(U x){P(ax,Oa(x))OA(x);}print(U x){prin(x);O("\n");}
 #define xat(b) i2 b##at(i2 i,Ux){U a=at(i,r1(x));i2 r=x(a,b##x);r0(a);return r;}
 xat(t)xat(a)f(sqz,P(ax||tx||!nx,x)i2 t=tat(0,x);i(nx,P(!aat(i,x)||t!=tat(i,x),x))U r=tn(t,nx);i2*p=k_(2,r);U*q=k_(2,x);i(nx,p[i]=*(i2*)(q+i));r0(x);r;)
