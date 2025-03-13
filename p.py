@@ -12,29 +12,29 @@ def n():
 def q():return ';'==cs(i)
 def E(x):
  while n() in ";[(":
-  if not type(x) is list:x=[x]
-  x=x+[e(t())]
+  if not type(x) is tuple:x=(x,)
+  x=x+(e(t()),)
  return x
 def t():
- if q():return []
+ if q():return ()
  x=n() if '('!=s0(i) else x[1] if 3>len(x:=E(s[i])) else x
  while 'a'==cs(i):
-  x=E(x) if '['==s0(i)else[n(),x]
+  x=E(x) if '['==s0(i)else(n(),x)
  return x
 def tr(x):#is train? if a verb or projection or composition
  if type(x)==int:return c[x]=='v'
 def o3(x):return x
 def o2(x):
  l=x[1];
- if type(l)is list:
-  if len(l)and l[0]=='o':return ['o',x]
+ if type(l)is tuple:
+  if len(l)and l[0]=='o':return ('o',x)
  else:
-  if type(l)!=str or c[l[0]]!=' ':return ['o']+x
+  if type(l)!=str or c[l[0]]!=' ':return ('o',)+x
  return x
 def v():return ';'<cs(i-1)
 def e(x):
  if q():return x
- v_=v();f=t();return o3([f,x,e(t())])if v()>v_ else o2([x,e(f)])
+ v_=v();f=t();return o3((f,x,e(t())))if v()>v_ else o2((x,e(f)))
 def lex(x):
  r=[];i=0
  while i<len(x):
@@ -43,12 +43,9 @@ def lex(x):
   i+=1
  return r
 def parse(x):
- global s,i;s=lex('('+x+' ');i=0;r=t();r=rs(r)
+ global s,i;s=lex('('+x+' ');i=0;r=t()
  if type(r)is tuple and len(r)and x[0]!='('and r[0]=='(':r=('[',)+r[1:]
  return r
-def rs(x):
- if type(x) is list:return tuple([rs(a) for a in x])
- return x
 def test():
     import sys
     if 0: #generate test cases
