@@ -46,8 +46,8 @@ def e(x):
 def lex(x):
  r=[];i=0
  while i<len(x):
-  if x[i]==' ' or x[i+1]!=':':r.append(x[i])
-  else:r.append(x[i:2+i]);i+=1
+  if x[i]!=' 'and c[x[i]]in'av'and x[i+1]==':':r.append(x[i:2+i]);i+=1
+  else:r.append(x[i])
   i+=1
  return r
 def parse(x):
@@ -58,7 +58,7 @@ def test():
     import sys
     if 0: #generate test cases
         print('[')
-        for x in ["x;y","(x;y)","f[x;y]","x+y","x+*y","1+3*x","(+x)%y","(+/x)%#x","x+m[*i]/y","1+2-","3*:/2","+-","3+-","5(+\\|:)\\x"]:
+        for x in ["x;y","(x;y)","f[x;y]","x+y","x+*y","1+3*x","(+x)%y","(+/x)%#x","x+m[*i]/y","1+2-","3*:/2","+-","3+-","5(+\\|:)\\x","f::x,0"]:
             print("        [%12s,%s ],"%(x.__repr__(),parse(x)))
         print(']')
     for x,y in [
@@ -76,6 +76,7 @@ def test():
         [        '+-',('o', '+:', '-') ],
         [       '3+-',('o', ('+', '3', ' '),'-') ],
         ['5(+\\|:)\\x',(('\\', ('o', ('\\', '+'), '|:')), '5', 'x') ],
+        [    'f::x,0',('::', 'f', (',', 'x', '0')) ],
         ]:
         if (r:=parse(x))!=y:print('!',x,r,'!=',y);sys.exit(1)
 if __name__=='__main__':

@@ -24,6 +24,7 @@ def e(x):
  if -1<p:
   if len(x)==2:return "k(%d, 0,%s)"%(p,e(x[1]))
   if len(x)==3:return "k(%d,%s,%s)"%(p,e(x[1]),e(x[2]))
+ if a=='::':return la[x[1]]
  return "ti(%s)"%x
 f=sys.stdin
 while 1:
