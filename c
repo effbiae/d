@@ -11,11 +11,11 @@ def tr(x):
  else:
   if x[0]=='o':trains[name]='f(%s,%s(%s(x)))'%(name,tr(x[1]),tr(x[2]))
   else:
-   if type(x[0])==str:#a projection
+   if x[0]in"'\\/":#is a derived verb
+    assert(x[0]=='\\');trains[name]='f(%s,scan(%s,x))'%(name,tr(x[1]))
+   else:#a projection
     p=v(x[0]);assert(-2<p and len(x)==3 and x[2]==' ')
     trains[name]='f(%s,k(%s,%s,x))'%(name,p,e(x[1]))
-   else:#is a derived verb
-    assert(x[0]=='\\');trains[name]='f(%s,scan(%s,x))'%(name,tr(x[1]))
  return name
 def e(x):
  if train(x):print(x);return 0
@@ -25,7 +25,7 @@ def e(x):
   if a[0]=='\\':assert(len(x)==3);return f'niters({tr(a[1])},{x[1]},{e(x[2])})'
  if a=='[':return "(%s)"%",".join([e(x) for x in x])
  p=v(a)
- if 0<p:
+ if -1<p:
   if len(x)==2:return "k(%d, 0,%s)"%(p,e(x[1]))
   if len(x)==3:return "k(%d,%s,%s)"%(p,e(x[1]),e(x[2]))
  if a=='::':return la[x[1]]
