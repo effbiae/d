@@ -18,4 +18,4 @@ test:
 	python3 p.py
 	cat t.in|./c>t.out&&diff t.out t.check
 clean:
-	rm -f g *.o _.h
+	rm -f k g *.o _.h t.out -r __pycache__
