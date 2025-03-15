@@ -21,9 +21,9 @@ $ ./c
 ```
 ### limitations
 ```
-the goal was only to produce the fibonacci seqence using k.edu's core
+the goal was only to produce the fibonacci sequence using k.edu's core
 in the parser, numbers are single digits, tokens are single characters except for monadic verbs
-implemented adverbs
+implemented adverbs:
   iterate  nf\x     3%:\3
   each     f'x      !:'!3
   scan (in a train) 9(+\|:)\2#1
