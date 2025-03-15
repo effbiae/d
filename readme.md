@@ -1,6 +1,5 @@
 ### a limited k compiler
-- it's a front end for [shakti](https://shakti.com/)'s k.edu
-- uses shakti's k.edu core for primitives
+c uses shakti's k.edu core for primitives
 ### get, build and run
 ```
 $ git clone --recursive https://github.com/effbiae/c.git   #recursive to get the k.edu submodule
