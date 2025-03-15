@@ -1,7 +1,5 @@
 #include"p.h"
 #define O printf
-#define r1(x) k_(1,x)
-#define r0(x) k_(0,x)
 #define rx r1(x)
 #define el tn(0,0)
 g(at,k(12,x,ti(i)))F(cat,k(17,a,x))f(en,k(17,0,x))static i2 omx=50;void dot(i2 n){$(n>omx,O(".."));}
