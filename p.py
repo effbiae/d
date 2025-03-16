@@ -11,7 +11,7 @@ def n():
 def q():return ';'==cs(i)
 def E(x):
  while n() in ";[(":
-  if not type(x)is tuple:x=(x,)
+  if not type(x)==tuple:x=(x,)
   x=x+(e(t()),)
  return x
 def t():

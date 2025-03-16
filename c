@@ -4,7 +4,7 @@ P=":+-*%&|<>=~.!@?#_^,$LMS...ERZ'/\\()";fns={};fni=0
 def v(x):return P.find(x)-1
 def tr(x):
  global fni;name='tr'+str(fni);fni+=1;a=x[0];p=v(a)
- if type(x)is str:
+ if type(x)==str:
   if -1<p:
    if len(x)==1:fns[name]='F(%s,k(%s,a,x))'%(name,p)
    else:assert(x[1]==':');fns[name]='f(%s,k(%s,0,x))'%(name,p)

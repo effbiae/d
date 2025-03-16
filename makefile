@@ -1,5 +1,5 @@
 C=clang-13
-F=-g -w -funsigned-char -fno-unwind-tables -mavx512f -mavx512dq -mavx512vbmi
+F=-w -funsigned-char -fno-unwind-tables -mavx512f -mavx512dq -mavx512vbmi
 K=-Ofast
 all:a.o z.o p.o
 a.o:k.edu/a.c makefile
@@ -16,6 +16,6 @@ _.h:
 	ln -sf k.edu/_.h _.h
 test:
 	python3 p.py
-	./c<t.in >t.out&&diff t.out t.check
+	./c<t.in>t.out&&diff t.out t.check
 clean:
 	rm -f k g *.o _.h t.out -r __pycache__
