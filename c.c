@@ -1,4 +1,4 @@
-#include"p.h"
+#include"c.h"
 #define O printf
 #define rx r1(x)
 #define el tn(0,0)

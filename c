@@ -5,7 +5,7 @@ def v(x):return P.find(x)-1
 def tr(x):
  global fni;name='tr'+str(fni);fni+=1;a=x[0];p=v(a)
  if type(x)==str:
-  if -1<p:
+  if-1<p:
    if len(x)==1:fns[name]='F(%s,k(%s,a,x))'%(name,p)
    else:assert(x[1]==':');fns[name]='f(%s,k(%s,0,x))'%(name,p)
   else:return x+'fun'
@@ -27,11 +27,11 @@ def e(x):
   if a[0]=='\\':assert(len(x)==3);return'niters(%s,%s,%s)'%(tr(a[1]),x[1],e(x[2]))
  if a=='[':return"(%s)"%",".join([e(x)for x in x[1:]])
  p=v(a)
- if -1<p:
+ if-1<p:
   if len(x)==2:return"k(%d, 0,%s)"%(p,e(x[1]))
   if len(x)==3:return"k(%d,%s,%s)"%(p,e(x[1]),e(x[2]))
- if x in '0123456789':return"ti(%s)"%x
- return 'r1(%s)'%x
+ if x in'0123456789':return"ti(%s)"%x
+ return'r1(%s)'%x
 f=sys.stdin
 while 1:
  if f.isatty():print(" ",end="");sys.stdout.flush();
@@ -40,7 +40,7 @@ while 1:
  x=parse(x)
  if main:=e(x):
   g=open("g.c","w")
-  g.write('#include"p.h"\n')
+  g.write('#include"c.h"\n')
   for a in fns:g.write(f'{fns[a]}\n')
   g.write("main(){k_(0,0);print(%s);}\n"%main)
   g.close()
