@@ -1,4 +1,4 @@
-### a limited k compiler
+### a limited k transpiler
 c uses shakti's k.edu core for primitives
 ### get, build and run
 ```

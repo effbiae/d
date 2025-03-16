@@ -16,6 +16,6 @@ _.h:
 	ln -sf k.edu/_.h _.h
 test:
 	python3 p.py
-	cat t.in|./c>t.out&&diff t.out t.check
+	./c<t.in >t.out&&diff t.out t.check
 clean:
 	rm -f k g *.o _.h t.out -r __pycache__

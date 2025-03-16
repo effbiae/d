@@ -1,22 +1,21 @@
 #!/usr/bin/python3
 from p import parse;import sys,os
-P=eval(os.popen('grep -o \'P=":+.*"\' k.edu/z.c').read()[2:]);assert(P[0]==':');fns={};tri=0
+P=":+-*%&|<>=~.!@?#_^,$LMS...ERZ'/\\()";fns={};fni=0
 def v(x):return P.find(x)-1
 def tr(x):
- global tri;name='tr'+str(tri);tri+=1
+ global fni;name='tr'+str(fni);fni+=1;a=x[0];p=v(a)
  if type(x)is str:
-  p=v(x[0])
   if -1<p:
    if len(x)==1:fns[name]='F(%s,k(%s,a,x))'%(name,p)
    else:assert(x[1]==':');fns[name]='f(%s,k(%s,0,x))'%(name,p)
   else:return x+'fun'
  else:
-  if x[0]=='o':fns[name]='f(%s,%s(%s(x)))'%(name,tr(x[1]),tr(x[2]))
+  if a=='o':fns[name]='f(%s,%s(%s(x)))'%(name,tr(x[1]),tr(x[2]))
   else:
-   if x[0]in"'\\/":#is a derived verb
-    assert(x[0]=='\\');fns[name]='f(%s,scan(%s,x))'%(name,tr(x[1]))
+   if a in"'\\/":#is a derived verb
+    assert(a=='\\');fns[name]='f(%s,scan(%s,x))'%(name,tr(x[1]))
    else:#a projection
-    p=v(x[0]);assert(-1<p and len(x)==3 and x[2]==' ')
+    assert(-1<p and len(x)==3 and x[2]==' ')
     fns[name]='f(%s,k(%s,%s,x))'%(name,p,e(x[1]))
  return name
 def la(f,x):name=f+'fun';fns[name]='f(%s,%s)'%(name,e(x));return name
@@ -25,7 +24,7 @@ def e(x):
  if a=='::':return la(*x[1:])
  if len(a)==2:
   if a[0]=="'":return'each(%s,%s)'%(tr(a[1]),e(x[1]))
-  if a[0]=='\\':assert(len(x)==3);return f'niters({tr(a[1])},{x[1]},{e(x[2])})'
+  if a[0]=='\\':assert(len(x)==3);return'niters(%s,%s,%s)'%(tr(a[1]),x[1],e(x[2]))
  if a=='[':return"(%s)"%",".join([e(x)for x in x[1:]])
  p=v(a)
  if -1<p:
