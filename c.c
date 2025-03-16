@@ -8,8 +8,8 @@ OA(i2 t,U x){P(nx==1,O(",");prin(0,at(0,rx)))P(!tx||!nx,O0(t,x));i2*a=k_(2,x);i(
 prin(i2 t,U x){P(ax,Oa(x))OA(t,x);}print(U x){prin(1,x);O("\n");}
 #define xat(b) i2 b##at(i2 i,Ux){U a=at(i,r1(x));i2 r=x(a,b##x);r0(a);return r;}
 xat(t)xat(a)f(sqz,P(ax||tx||!nx,x)i2 t=tat(0,x);i(nx,P(!aat(i,x)||t!=tat(i,x),x))U r=tn(t,nx);i2*p=k_(2,r);U*q=k_(2,x);i(nx,p[i]=*(i2*)(q+i));r0(x);r;)
-U scan(uF w,U x){$(ax,x=en(x));P(!nx,ti(-1));U r=tn(0,nx);U*p=k_(2,r);*p=at(0,rx);i(nx-1,p[i+1]=w(r1(p[i]),at(i+1,rx)));r0(x);return sqz(r);}
-f(last,P(ax,x)P(!nx,el)at(nx-1,x))
+U scan(uF w,U x){$(ax,x=en(x));P(!nx,x);U r=tn(0,nx);U*p=k_(2,r);*p=at(0,rx);i(nx-1,p[i+1]=w(r1(p[i]),at(i+1,rx)));r0(x);return sqz(r);}
+f(last,P(ax||!nx,x)at(nx-1,x))
 U over(uF w,U x){return last(scan(w,x));}
 U each(uf w,U x){$(ax,x=en(x));U r=tn(0,nx);U*p=k_(2,r);i(nx,p[i]=w(at(i,rx)));r0(x);return sqz(r);}
 U niters(uf w,i2 n,U x){U r=tn(0,n+1);U*p=k_(2,r);*p=r1(x);i(n,p[i+1]=w(r1(p[i])));return sqz(r);}
