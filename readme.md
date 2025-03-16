@@ -30,3 +30,10 @@ lambdas are monadic (only mention x)
 no variables other than lambdas
 doesn't remember previous lines' lambdas
 ```
+### source
+```
+c      the transpiler
+c.c    output routines and adverbs
+k.edu  submodule -- kept up to date with shakti
+p.py   the parser
+```
