@@ -1,5 +1,5 @@
 m=["av;","['/\\",":+-*%!&|<>=~,^#_$?@.",";)]\n "]
-c=dict([(chr(x),' ') for x in range(128)])
+c=dict([(chr(x),' ')for x in range(128)])
 def f(x,s):
  for a in s:c[a]=x
 for i in range(3):f(m[0][i],m[i+1])
@@ -11,14 +11,14 @@ def n():
 def q():return ';'==cs(i)
 def E(x):
  while n() in ";[(":
-  if not type(x) is tuple:x=(x,)
+  if not type(x)is tuple:x=(x,)
   x=x+(e(t()),)
  return x
 def t():
- if q():return ' '
- x=n() if '('!=s[i] else x[1] if 3>len(x:=E(s[i])) else x
+ if q():return' '
+ x=n() if '('!=s[i]else x[1]if 3>len(x:=E(s[i]))else x
  while 'a'==cs(i):
-  x=E(x) if '['==s[i]else(n(),x)
+  x=E(x)if'['==s[i]else(n(),x)
  return x
 def verb(x):#primitive or derived verb?
  if type(x)==str:return c[x[0]]=='v'
@@ -37,9 +37,9 @@ def monad(x):
   return x+':'
  return x
 def o2(x):
- if train(x[1]):return ('o',monad(x[0]),x[1])
+ if train(x[1]):return('o',monad(x[0]),x[1])
  return x
-def v():return ';'<cs(i-1)
+def v():return';'<cs(i-1)
 def e(x):
  if q():return x
  v_=v();f=t();return o3((f,x,e(t())))if v()>v_ else o2((x,e(f)))
@@ -52,7 +52,7 @@ def lex(x):
  return r
 def parse(x):
  global s,i;s=lex('('+x+' ');i=0;r=t()
- if type(r)is tuple and len(r)and x[0]!='('and r[0]=='(':r=('[',)+r[1:]
+ if type(r)==tuple and len(r)and x[0]!='('and r[0]=='(':r=('[',)+r[1:]
  return r
 def test():
     import sys
