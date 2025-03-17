@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from p import parse;import sys,os
 P=":+-*%&|<>=~.!@?#_^,$LMS...ERZ'/\\()"
+d={'\\':'scan','/':'over',"'":'each'}
 def v(x):return P.find(x)-1
 def tr(x):
  global fni;name='tr'+str(fni);fni+=1;a=x[0];p=v(a)
@@ -12,7 +13,6 @@ def tr(x):
  else:
   if a=='o':fns[name]='f(%s,%s(%s(x)))'%(name,tr(x[1]),tr(x[2]))
   else:
-   d={'\\':'scan','/':'over',"'":'each'}
    if a in d:
     fns[name]='f(%s,%s(%s,x))'%(name,d[a],tr(x[1]))
    else:#a projection
@@ -24,13 +24,11 @@ def e(x):
  a=x[0];p=v(a[0])
  if a=='::':return la(*x[1:])
  if len(a)==2:
-  if a[0]=="'":return'each(%s,%s)'%(tr(a[1]),e(x[1]))
-  if a[0]=='\\':
-   if len(x)==2:return 'scan(%s,%s)'%(tr(a[1]),e(x[1]))
-   return'niters(%s,%s,%s)'%(tr(a[1]),x[1],e(x[2]))
-  if a[0]=='/':
-    if len(x)!=2:print("nyi: use F/");return 0
-    return'over(%s,%s)'%(tr(a[1]),e(x[1]))
+  if len(x)==2:
+   return '%s(%s,%s)'%(d[a[0]],tr(a[1]),e(x[1]))
+  elif len(x)==3:
+   if a[0]=='\\':return'niters(%s,%s,%s)'%(tr(a[1]),x[1],e(x[2]))
+   else:print("nyi: no dyadic %s"%a[0]);return 0
  if a=='[':return"(%s)"%",".join([e(x)for x in x[1:]])
  if-1<p:
   if len(x)==2:return"k(%d, 0,%s)"%(p,e(x[1]))
