@@ -29,7 +29,7 @@ def e(x):
    if len(x)==2:return 'scan(%s,%s)'%(tr(a[1]),e(x[1]))
    return'niters(%s,%s,%s)'%(tr(a[1]),x[1],e(x[2]))
   if a[0]=='/':
-    if len(x)!=2:print("nyi: use f/");return 0
+    if len(x)!=2:print("nyi: use F/");return 0
     return'over(%s,%s)'%(tr(a[1]),e(x[1]))
  if a=='[':return"(%s)"%",".join([e(x)for x in x[1:]])
  if-1<p:
@@ -43,6 +43,7 @@ while 1:
  if f.isatty():print(" ",end="");sys.stdout.flush();
  x=f.readline()
  if not x or x[0]=='\\':sys.exit(0)
+ if not x.strip():continue
  x=parse(x)
  main=e(x)
  if main:
