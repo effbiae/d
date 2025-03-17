@@ -1,7 +1,9 @@
 C=clang-13
 F=-w -funsigned-char -fno-unwind-tables -mavx512f -mavx512dq -mavx512vbmi
 K=-Ofast
-all:a.o z.o c.o
+all:k.edu a.o z.o c.o
+k.edu:
+	echo 'you need to  git clone --recursive https://github.com/effbiae/c.git' && ls k.edu
 a.o:k.edu/a.c makefile
 	$C $K -c $< $F
 z.o:k.edu/z.c makefile
