@@ -20,7 +20,6 @@ $ ./c
 ```
 ### limitations
 ```
-the goal was only to produce the fibonacci sequence using k.edu's core
 in the parser, numbers are single digits, tokens are single characters except for monadic verbs
 implemented adverbs:
   iterate  nf\x     3%:\3
