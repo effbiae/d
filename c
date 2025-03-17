@@ -44,8 +44,7 @@ while 1:
  x=f.readline()
  if not x or x[0]=='\\':sys.exit(0)
  x=parse(x)
- try:main=e(x)
- except Exception as e:print(e);continue
+ main=e(x)
  if main:
   g=open("g.c","w")
   g.write('#include"c.h"\n')

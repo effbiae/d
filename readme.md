@@ -37,4 +37,5 @@ c      the transpiler
 c.c    output routines and adverbs
 k.edu  submodule -- kept up to date with shakti
 p.py   the parser
+g.c    this will be generated after running c (it's the transpilation)
 ```
