@@ -25,7 +25,8 @@ in the parser, numbers are single digits, tokens are single characters except fo
 implemented adverbs:
   iterate  nf\x     3%:\3
   each     f'x      !:'!3
-  scan (in a train) 9(+\|:)\2#1
+  scan     F\x      +\!3
+  over     F/x      +/!3
 lambdas are monadic (only mention x)
 no variables other than lambdas
 doesn't remember previous lines' lambdas
