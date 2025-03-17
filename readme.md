@@ -1,4 +1,4 @@
-### a limited k transpiler
+### a k transpiler
 c uses shakti's k.edu core for primitives
 ### get, build and run
 ```
@@ -26,14 +26,14 @@ implemented adverbs:
   each     f'x      !:'!3
   scan     F\x      +\!3
   over     F/x      +/!3
-lambdas are monadic (only mention x)
-no variables other than lambdas
-doesn't remember previous lines' lambdas
+functions are monadic (only mention x)
+no variables other than functions
+doesn't remember previous lines' functions
 ```
 ### source
 ```
 c      the transpiler
-c.c    output routines and adverbs
+c.c    print and adverbs
 k.edu  submodule -- kept up to date with shakti
 p.py   the parser
 g.c    this will be generated after running c (it's the transpilation)
