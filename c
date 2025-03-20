@@ -16,7 +16,7 @@ def tr(x):
    if a in d:
     fns[name]='f(%s,%s(%s,x))'%(name,d[a],tr(x[1]))
    else:#a projection
-    assert(-1<p and len(x)==3 and x[2]==' ')
+    assert(-1<p and len(x)==3 and x[2]==())
     fns[name]='f(%s,k(%s,%s,x))'%(name,p,e(x[1]))
  return name
 def la(f,x):name=f+'fun';fns[name]='f(%s,%s)'%(name,e(x));return name
@@ -41,7 +41,6 @@ while 1:
  if f.isatty():print(" ",end="");sys.stdout.flush();
  x=f.readline()
  if not x or x[0]=='\\':sys.exit(0)
- if not x.strip():continue
  x=parse(x)
  main=e(x)
  if main:
