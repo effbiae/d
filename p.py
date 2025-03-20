@@ -3,21 +3,23 @@ c=dict([(chr(x),' ')for x in range(128)])
 def f(x,s):
  for a in s:c[a]=x
 for i in range(3):f(m[0][i],m[i+1])
-def cs(i):return c[s[i][0]]
+def cs(i):
+ if(i<len(s)):return c[s[i][0]]
+ return ';'
 def n():
  global i
- if s[i]!=' ':i+=1;return s[i-1]
+ if len(s)!=i:i+=1;return s[i-1]
  return ' ';
 def q():return ';'==cs(i)
 def E(x):
  while n() in ";[(":
-  if not type(x)==tuple:x=(x,)
+  if type(x)!=tuple:x=(x,)
   x=x+(e(t()),)
  return x
 def t():
  if q():return' '
- x=n() if '('!=s[i]else x[1]if 3>len(x:=E(s[i]))else x
- while 'a'==cs(i):
+ x=n()if'('!=s[i]else x[1]if 3>len(x:=E(s[i]))else x
+ while'a'==cs(i):
   x=E(x)if'['==s[i]else(n(),x)
  return x
 def verb(x):#primitive or derived verb?
@@ -30,7 +32,7 @@ def train(x):#is train? if a verb or projection or composition
   if len(x)==3 and x[2]==' ':return 1
  return 0
 def o3(x):
- if train(x[2]):return ('o',(x[0],x[1],' '),x[2])
+ if train(x[2]):return('o',(x[0],x[1],' '),x[2])
  return x
 def monad(x):
  if type(x)==str and c[x[0]]=='v':
@@ -46,12 +48,12 @@ def e(x):
 def lex(x):
  r=[];i=0
  while i<len(x):
-  if x[i]!=' 'and c[x[i]]in'av'and x[i+1]==':':r.append(x[i:2+i]);i+=1
+  if i<len(x)-1 and c[x[i]]in'av'and x[i+1]==':':r.append(x[i:2+i]);i+=1
   else:r.append(x[i])
   i+=1
  return r
 def parse(x):
- global s,i;s=lex('('+x+' ');i=0;r=t()
+ global s,i;s=lex('('+x);i=0;r=t()
  if type(r)==tuple and len(r)and x[0]!='('and r[0]=='(':r=('[',)+r[1:]
  return r
 def test():
@@ -78,6 +80,6 @@ def test():
         ['5(+\\|:)\\x',(('\\', ('o', ('\\', '+'), '|:')), '5', 'x') ],
         [    'f::x,0',('::', 'f', (',', 'x', '0')) ],
         ]:
-        if (r:=parse(x))!=y:print('!',x,r,'!=',y);sys.exit(1)
+        if (r:=parse(x))!=y:print('!',repr(x),repr(r),'!=',y);sys.exit(1)
 if __name__=='__main__':
  test()
