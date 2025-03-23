@@ -12,6 +12,8 @@ c.o:c.c c.h _.h makefile
 	$C -c $< $F
 d:d.c a.o z.o c.o
 	$C -od $^ $F
+t:t.c a.o z.o c.o
+	$C -ot $^ $F
 g:g.c c.o a.o z.o
 	$C -og $^ $F
 k:k.edu/?.[ch] makefile

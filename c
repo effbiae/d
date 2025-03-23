@@ -34,7 +34,7 @@ def e(x):
   if len(x)==2:return"k(%d, 0,%s)"%(p,e(x[1]))
   if len(x)==3:return"k(%d,%s,%s)"%(p,e(x[1]),e(x[2]))
  if x in'0123456789':return"ti(%s)"%x
- return'r1(%s)'%x
+ return'_r(%s)'%x
 f=sys.stdin
 while 1:
  global fns;fns={};fni=0;
