@@ -1,5 +1,6 @@
 #define exit kexit
 #include"_.h"
+#undef exit
 void k_();U ku(i2,U),k(i2,U,U);
 _f(_r,ax?x:ku(0,x))_f(r_,ax?x:ku(1,x))
 #define rx r_(x)
