@@ -12,7 +12,7 @@ _Z(printt,$(ax,prini(cat(x,tn(2,0)),stdout)){O("(");i(nx,printt(at(rx,i)));O(")"
 #define bi bat(i)
 #define nb x(b,nx)
 ZU b;static i2 i;_U(bat,P(i>=nb,' ')x(at(r_(b),i),ix),ii)
-ZU t(),e(U);_U(n,ti(i<nb?r(bi,i++):' '))_D(i2,q,';'==c[bi])f(E,W(-1<fi(";[(",x(n(),ix)))x=cat(x,en(e(t())));x)
+ZU t(),e(U);_U(n,ti(r(bi,i++))_D(i2,q,';'==c[bi])f(E,W(-1<fi(";[(",x(n(),ix)))x=cat(x,en(e(t())));x)
 _D(i2,av,';'<c[bat(i-1)])f(e,P(q(),x)i2 v_=av();U f=t();av()>v_?_3(f,x,e(t())):_2(x,e(f)))
 _U(t,P(q(),el)Ux='('!=bi?n():(x=E(ti(bi)),3>nx)?at(x,1):x;W('a'==c[bi])x='['==bi?E(x):_2(n(),x);x)
 _U(parse,b=cat(ti('('),p_(s));i=0;t(),ss)
