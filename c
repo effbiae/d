@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 from p import parse;import sys,os
-P=":+-*%&|<>=~.!@?#_^,$LMS...ERZ'/\\()"
+P=eval(os.popen('grep -o P=\\"[^\\"]*\\" k.edu/z.c').read()[2:])[:-5]
 d={'\\':'scan','/':'over',"'":'each'}
-def v(x):return P.find(x)-1
+def v(x):return P.find(x)
 def tr(x):
  global fni;name='tr'+str(fni);fni+=1;a=x[0];p=v(a)
  if type(x)==str:
@@ -34,7 +34,7 @@ def e(x):
   if len(x)==2:return"k(%d, 0,%s)"%(p,e(x[1]))
   if len(x)==3:return"k(%d,%s,%s)"%(p,e(x[1]),e(x[2]))
  if x in'0123456789':return"ti(%s)"%x
- return'_r(%s)'%x
+ return'r_(%s)'%x
 f=sys.stdin
 while 1:
  global fns;fns={};fni=0;
@@ -47,6 +47,6 @@ while 1:
   g=open("g.c","w")
   g.write('#include"c.h"\n')
   for a in fns:g.write(f'{fns[a]}\n')
-  g.write("main(){k_(0,0);print(%s);}\n"%main)
+  g.write("int main(){k_();print(%s);}\n"%main)
   g.close()
   os.system("make g >/dev/null && ./g")
