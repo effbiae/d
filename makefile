@@ -22,8 +22,9 @@ k.h:
 	ln -sf k.edu/k.h k.h
 _.h:
 	ln -sf k.edu/_.h _.h
-test:
+test: d
 	python3 p.py
 	./c<t.in>t.out&&diff t.out t.check
+	./d
 clean:
 	rm -f k t d g g.c *.o _.h k.h t.out -r __pycache__
