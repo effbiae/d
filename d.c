@@ -22,7 +22,7 @@ int main(int n,i0**v){ini();
  U x=en(ti(3));
  print(fgh(0));
  printi(pc("f(%,%(%(x)));\n",fgh(0)));
- sd="x[*i]/y";
- printt(parse(d));
+ sd="0";
+ printt(eg(parse(d)));
  return 0;
 }
