@@ -16,13 +16,13 @@ _U(parse,Ux=cat(ti('('),p_(s));sb=sx;nb=nx;i=0;r(t(),_r(x)),ss)
 /*init*/_Z(ini,k_();P=m[2];i(128,c[i]=' ')i(3,sd=m[i+1];W(*d)c[*d++]=m[0][i]))
 /*template*/_U(pc,A(!ax&&tx==0);Ur=tn(2,0);ii=0;h(strlen(s),r=cat(r,s[h]=='%'?at(rx,i++):ti(s[h])));A(nx==i);_r(x);r,ss,Ux)
 /*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(d,h(3,P(x(at(x,0),ix)==ed[0][h],p_(ed[h+1])));0)
-f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",en(x)));0)
+f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",en(en(x))));0)
 _f(fgh,Ur=tn(0,3);U*p=sr;i0*e="f\0g\0h";i(3,p[i]=p_(e+i*2));r)
 int main(int n,i0**v){ini();
  U x=en(ti(3));
  print(fgh(0));
  printi(pc("f(%,%(%(x)));\n",fgh(0)));
  sd="0";
- printt(eg(parse(d)));
+ printi(eg(parse(d)));
  return 0;
 }
