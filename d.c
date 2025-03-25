@@ -14,13 +14,10 @@ _D(i2,av,';'<c[s(i-1)])f(e,P(q(),x)i2 v_=av();U f=t();av()>v_?_3(f,x,e(t())):_2(
 _U(t,P(q(),el)Ux='('!=s(i)?n():(x=E(ti(s(i))),3>nx)?at(x,1):x;W('a'==c[s(i)])x='['==s(i)?E(x):_2(n(),x);x)
 _U(parse,Ux=cat(ti('('),p_(s));sb=sx;nb=nx;i=0;r(t(),_r(x)),ss)
 /*init*/_Z(ini,k_();P=m[2];i(128,c[i]=' ')i(3,sd=m[i+1];W(*d)c[*d++]=m[0][i]))
-/*template*/_U(pc,P(ax||!tx,pc(s,en(x)))Ur=tn(2,0);ii=0;h(strlen(s),r=cat(r,s[h]=='%'?at(rx,i++):ti(s[h])));A(nx==i);_r(x);r,ss,Ux)
+/*template*/_U(pc,P(ax||tx,pc(s,en(x)))Ur=tn(2,0);ii=0;h(strlen(s),r=cat(r,s[h]=='%'?at(rx,i++):ti(s[h])));A(nx==i);_r(x);r,ss,Ux)
 /*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(d,h(3,P(x(at(x,0),ix)==ed[0][h],p_(ed[h+1])));0)
 f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));0)
-_f(fgh,Ur=tn(0,3);U*p=sr;i0*e="f\0g\0h";i(3,p[i]=p_(e+i*2));r)
 int main(int n,i0**v){ini();
- U x=en(ti(3));
- sd="0";
- printi(eg(parse(d)));
+ printi(eg(parse("0")));
  return 0;
 }
