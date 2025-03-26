@@ -19,7 +19,7 @@ _U(parse,Ux=cat(ti('('),p_(s));sb=sx;ns=nx;i=0;_x(t()),ss)
 /*parse test*/Z0*pts[][2]={{"","()"},{"0","0"},{"1+2","(+12)"},{"+/x","((/+)x)"},{"x[*i]'y","(('(x(*i)))y)"},{0}};
 f(t2s,A(!tx|tx==2);P(ax,en(x))Ur=ti('(');i(nx,r=cat(r,t2s(at(rx,i))))r=cat(r,ti(')'));_(r))
 _Z(pt,i2 i=0;W(*pts[i])(Amat(t2s(parse(*pts[i])),p_(pts[i][1])),i++))
-/*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(ad,h(3,P(x(at(x,0),ix)==ed[0][h],p_(ed[h+1])));0)
+/*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(ad,U r=fi(*ed,x);$(r,P(p_(ed[ir+1])));0)
 f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));0)
 U dl(U e){//pass a parse tree, get back its evaluation
 FILE*g=fopen("h.c","w");pO(g,pc("#include\"d.h\"\nU d(){return %;}\n",eg(e)));fclose(g);system("make h.so 2>&1|head");
