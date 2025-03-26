@@ -22,6 +22,4 @@ f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));0)
 f(dl,//pass a parse tree, get back its evaluation
  FILE*g=fopen("h.c","w");pf(g,pc("#include\"d.h\"\nU d(){return %;}\n",eg(x)));fclose(g);system("rm h.so;make h.so 2>&1|head");
  void*l=dlopen("./h.so",RTLD_NOW);$(!l,O("%s\n",dlerror())); void(*ini)()=dlsym(l,"ini");ini(k,tn);U(*d)()=dlsym(l,"d");d())
-_Z(ini,k_();i(128,c[i]=' ')i(3,sd=m[i+1];W(*d)c[*d++]=m[0][i]);pt())
-int main(int n,i0**v){ini();print(dl(parse("4")));
-	return 0;}
+_Z(ini,k_();i(128,c[i]=' ')i(3,sd=m[i+1];W(*d)c[*d++]=m[0][i]);pt())int main(int n,i0**v){ini();print(dl(parse("4")));}
