@@ -18,7 +18,7 @@ _U(parse,Ux=cat(ti('('),p_(s));sb=sx;ns=nx;i=0;_x(t()),ss)
 /*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(d,h(3,P(x(at(x,0),ix)==ed[0][h],p_(ed[h+1])));0)
 f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));0)
 F(mat,in=1;$(ta-tx|(ax?ix-ia:na-nx),n=0);ii=0;W(n&&!ax&&i<nx){U m=mat(at(ra,i),at(rx,i));n=x(m,ix);i++;}_r(a);_x(ti(n));)
-F(Aeq,Ur=mat(ra,rx);$(!x(r,ix),p2(pc("~%~%\n",_2(a,x)));xx());_r(a);_x(r))
+F(Aeq,Ur=mat(ra,rx);$(!x(r,ix),p2(pc("~%~%\n",_2(ra,rx)));xx());_r(a);_x(r))
 Z0*pts[][2]={{"","()"},{"0","0"},{"1+2","(+12)"},{"+/x","((/+)x)"},{"x[*i]'y","(('(x(*i)))y)"},{0}};
-_Z(pt,i2 i=0;W(*pts[i])(Aeq(t2s(parse(pts[i][0])),p_(pts[i][1])),i++))
+_Z(pt,i2 i=0;W(*pts[i])(Aeq(t2s(parse(*pts[i])),p_(pts[i][1])),i++))
 int main(int n,i0**v){ini();pt();return 0;}
