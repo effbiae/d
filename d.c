@@ -1,4 +1,5 @@
 #include"c.h"
+#include"P.h"
 #include<dlfcn.h>
 U strlen(const char*);int system(char*);
 #define O printf
@@ -9,7 +10,7 @@ U strlen(const char*);int system(char*);
 /*print*/_Z(pf,A(tx==2);i2*p=sx;i(nx,fputc(p[i],f));_x(fflush(f));,FILE*f,Ux)_Z(p1,Pv(ax,p1(en(x)))Pv(tx!=2,print(x);xx())pf(stdout,x),Ux)
 /*template*/_U(pc,P(ax||tx,pc(s,en(x)))Ur=tn(2,0);ii=0;h(strlen(s),r=cat(r,s[h]=='%'?at(rx,i++):ti(s[h])));A(nx==i);_x(r),ss,Ux)
 /*assert match*/F(Amat,Ur=mat(ra,rx);$(!x(r,ix),p1(pc("~%~%\n",_2(ra,rx)));xx());_r(a);_x(r))
-/*parse*/Z0*m[]={"av;","['/\\",":+-*%&|<>=~.!@?#_^,$LMS...ERZ",";)]\n "},*P,c[128];_U(fi,sd=s-1;W(*++d)P(*d==ix,ti(d-s));0,ss,Ux)f(v,fi(P,x))
+/*parse*/Z0*m[]={"av;","['/\\",Ps,";)]\n "},*P,c[128];_U(fi,sd=s-1;W(*++d)P(*d==ix,ti(d-s));0,ss,Ux)f(v,fi(P,x))
 static i2 i,*sb,ns;_D(i2,s,P(i>=ns,' ')sb[i],ii)ZU t(),e(U);_U(n,ti(r(s(i),i++)))_D(i2,q,';'==c[s(i)])f(E,W(fi(";[(",n()))x=cat(x,en(e(t())));x)
 _D(i2,av,';'<c[s(i-1)])f(e,P(q(),x)i2 v_=av();U f=t();av()>v_?_3(f,x,e(t())):_2(x,e(f)))
 _U(t,P(q(),el)Ux='('!=s(i)?n():(x=E(ti(s(i))),3>nx)?at(x,1):x;W('a'==c[s(i)])x='['==s(i)?E(x):_2(n(),x);x)
