@@ -1,5 +1,5 @@
 C=clang-13
-F=-g -funsigned-char -fno-unwind-tables -mavx512f -mavx512dq -mavx512vbmi -Wno-multichar -Wno-parentheses -Wno-incompatible-pointer-types -Wfatal-errors
+F=-g -funsigned-char -fno-unwind-tables -mavx512f -mavx512dq -mavx512vbmi -Wno-multichar -Wno-parentheses -Wno-incompatible-pointer-types -Wfatal-errors -Wno-return-type
 K=-Ofast -fno-builtin -nostdlib
 all:k.edu a.o z.o c.o d
 k.edu:
@@ -16,6 +16,8 @@ t:t.c a.o z.o c.o
 	$C -ot $^ $F
 g:g.c c.o a.o z.o
 	$C -g -og $^ $F -Wno-unused-value
+h.so:h.c
+	$C -g -shared -oh.so -fPIC $< $F -Wno-unused-value
 k:k.edu/?.[ch] makefile
 	$C $K -ok k.edu/?.c -nostdlib $F
 k.h:

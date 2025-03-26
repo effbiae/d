@@ -1,5 +1,6 @@
 #include"c.h"
-#include<string.h>
+#include<dlfcn.h>
+U strlen(const char*);int system(char*);
 #define O printf
 #undef t
 #define Pv(x,z) if(x){_(z);return;}
@@ -15,10 +16,14 @@ _U(t,P(q(),el)Ux='('!=s(i)?n():(x=E(ti(s(i))),3>nx)?at(x,1):x;W('a'==c[s(i)])x='
 _U(parse,Ux=cat(ti('('),p_(s));sb=sx;ns=nx;i=0;_x(t()),ss)
 /*init*/_Z(ini,k_();P=m[2];i(128,c[i]=' ')i(3,sd=m[i+1];W(*d)c[*d++]=m[0][i]))
 /*template*/_U(pc,P(ax||tx,pc(s,en(x)))Ur=tn(2,0);ii=0;h(strlen(s),r=cat(r,s[h]=='%'?at(rx,i++):ti(s[h])));A(nx==i);_x(r),ss,Ux)
-/*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(d,h(3,P(x(at(x,0),ix)==ed[0][h],p_(ed[h+1])));0)
+/*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(ad,h(3,P(x(at(x,0),ix)==ed[0][h],p_(ed[h+1])));0)
 f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));0)
 F(mat,in=1;$(ta-tx|(ax?ix-ia:na-nx),n=0);ii=0;W(n&&!ax&&i<nx){U m=mat(at(ra,i),at(rx,i));n=x(m,ix);i++;}_r(a);_x(ti(n));)
 F(Aeq,Ur=mat(ra,rx);$(!x(r,ix),p2(pc("~%~%\n",_2(ra,rx)));xx());_r(a);_x(r))
 Z0*pts[][2]={{"","()"},{"0","0"},{"1+2","(+12)"},{"+/x","((/+)x)"},{"x[*i]'y","(('(x(*i)))y)"},{0}};
 _Z(pt,i2 i=0;W(*pts[i])(Aeq(t2s(parse(*pts[i])),p_(pts[i][1])),i++))
-int main(int n,i0**v){ini();pt();return 0;}
+int main(int n,i0**v){ini();pt();
+	FILE*g=fopen("h.c","w");fprintf(g,"#include\"d.h\"\nU d(){return _k(17,0,ti(3));}\n");fclose(g);system("make h.so 2>&1|head");
+	void*l=dlopen("./h.so",RTLD_NOW);$(!l,O("%s\n",dlerror())); void(*ini)()=dlsym(l,"ini");ini(k,tn);U(*d)()=dlsym(l,"d");print(d());
+	ini(&k,&tn);p2(d());
+	return 0;}
