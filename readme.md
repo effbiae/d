@@ -4,7 +4,7 @@ c uses shakti's k.edu core for primitives
 ```
 $ git clone --recursive https://github.com/effbiae/c.git   #recursive to get the k.edu submodule
 $ cd c
-$ make
+# ./configure && make
 $ ./c
  !3
 0 1 2

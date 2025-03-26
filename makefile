@@ -1,9 +1,10 @@
 C=clang-13
 F=-g -funsigned-char -fno-unwind-tables -mavx512f -mavx512dq -mavx512vbmi -Wno-multichar -Wno-parentheses -Wno-incompatible-pointer-types -Wfatal-errors -Wno-return-type
 K=-Ofast -fno-builtin -nostdlib
-all:k.edu a.o z.o c.o d
+all:k.edu a.o z.o c.o d P
 k.edu:
 	echo 'you need to  git clone --recursive https://github.com/effbiae/c.git' && ls k.edu
+P:;./configure
 a.o:k.edu/a.c makefile
 	$C $K -c $< $F
 z.o:k.edu/z.c makefile

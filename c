@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from p import parse;import sys,os
-P=eval(os.popen('grep -o P=\\"[^\\"]*\\" k.edu/z.c').read()[2:])[:-5]
+P=open("P").read()
 d={'\\':'scan','/':'over',"'":'each'}
 def v(x):return P.find(x)
 def tr(x):

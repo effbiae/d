@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+a=$(grep -o 'P="[^"]*"' k.edu/z.c);echo -n ${a:3:29}>P
