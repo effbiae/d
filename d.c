@@ -21,7 +21,7 @@ f(t2s,A(!tx|tx==2);P(ax,en(x))Ur=ti('(');i(nx,r=cat(r,t2s(at(rx,i))))r=cat(r,ti(
 /*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(ad,U r=fi(*ed,x);r?p_(ed[x(r,ix)+1]):0)
 U fns,fms;_Z(fn0,fns=el;fms=el)
 f(train,i2 p;i2 f=x(fns,nx);U nm=pc("tr%",$i(f));fms=cat(fms,r_(nm));
-		P(ax&&(p=v(ix)),U u=_2(r_(nm),$i(p));i0*t=ix>>8?"f(%,k(%,0,x))":"F(%,k(%,a,x))";fns=cat(fns,en(pc(t,u)));nm);0)
+		P(ax&&(p=v(ix)),U u=_2(r_(nm),$i(p));fns=cat(fns,en(pc(ix>>8?"f(%,k(%,0,x))":"F(%,k(%,a,x))",u)));nm);0)
 f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));
      A(!ax);U a=at(rx,0);U r=v(a);A(r);pc("_k(%,0,%)",_2($i(r),eg(at(x,1)))))
      //adverb.. A(na==2);A(ad(at(ra,0)));pc("%(%,%)",_3(ad(at(ra,0)),train(at(a,1)),eg(at(x,1))))
