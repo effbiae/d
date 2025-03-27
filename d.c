@@ -23,9 +23,10 @@ U fns,fms;_Z(fn0,fns=el;fms=el)
 f(train,i2 p;i2 f=x(fns,nx);U nm=pc("tr%",$i(f));fms=cat(fms,r_(nm));
 		P(ax&&(p=v(ix)),U u=_2(r_(nm),$i(p));fns=cat(fns,en(pc(ix>>8?"f(%,k(%,0,x))":"F(%,k(%,a,x))",u)));nm);0)
 f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));
-     A(!ax);U a=at(rx,0);U r=v(a);A(r);pc("_k(%,0,%)",_2($i(r),eg(at(x,1)))))
+     A(!ax&&nx);U a=at(rx,0);p1(ra);U p=ra?v(ra):0;A(p);
+     P(p,nx==2?pc("_k(%,0,%)",_2($i(p),eg(at(rx,1)))):pc("_k(%,%,%)",_3($i(p),eg(at(rx,1)),eg(at(rx,2)))));A(0);0)
      //adverb.. A(na==2);A(ad(at(ra,0)));pc("%(%,%)",_3(ad(at(ra,0)),train(at(a,1)),eg(at(x,1))))
 f(dl,//pass a parse tree, get back its evaluation
  FILE*g=fopen("h.c","w");pf(g,pc("#include\"d.h\"\nU d(){return %;}\n",eg(x)));fclose(g);system("rm -f h.so;make h.so 2>&1|head");
  void*l=dlopen("./h.so",RTLD_NOW);$(!l,O("%s\n",dlerror())); void(*ini)()=dlsym(l,"ini");ini(k,tn);U(*d)()=dlsym(l,"d");d())
-_Z(ini,k_();i(256,c[i]=' ')i(3,sd=mi[i+1];W(*d)c[*d++]=mi[0][i]);pt())int main(int n,i0**v){ini();/*while.. fn0()*/print(dl(parse("!3")));}
+_Z(ini,k_();i(256,c[i]=' ')i(3,sd=mi[i+1];W(*d)c[*d++]=mi[0][i]);pt())int main(int n,i0**v){ini();/*while.. fn0()*/print(dl(parse("1+!3")));}
