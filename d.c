@@ -29,6 +29,6 @@ f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));
      A(na==2);A(ad(at(ra,0)));pc("%(%,%)",_3(ad(at(ra,0)),train(at(a,1)),eg(at(x,1)))))
 _U(fs,Ux=fns;Ua=fms;Ur=p_("");i(nx,r=cat(r,at(rx,i)));r)
 f(dl,//pass a parse tree, get back its evaluation
- FILE*g=fopen("h.c","w");U r=eg(x);pf(g,pc("#include\"d.h\"\n%\nU d(){return %;}\n",_2(fs(),r)));fclose(g);system("rm -f h.so;make h.so 2>&1|head");
+ FILE*g=fopen("h.c","w");U r=eg(x);pf(g,pc("#include\"c.h\"\n%\nU d(){return %;}\n",_2(fs(),r)));fclose(g);system("rm -f h.so;make h.so 2>&1|head");
  void*l=dlopen("./h.so",RTLD_NOW);$(!l,O("%s\n",dlerror()));U(*d)()=dlsym(l,"d");d())
 _Z(ini,k_();i(256,c[i]=' ')i(3,sd=mi[i+1];W(*d)c[*d++]=mi[0][i]);pt())int main(int n,i0**v){ini();/*while*/fn0();print(dl(parse("+/!5")));}
