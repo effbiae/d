@@ -14,13 +14,13 @@ c.o:c.c c.h _.h k.h makefile
 	$C -c $< $F
 d.c:P.h
 d:d.c a.o z.o c.o
-	$C -od $^ $F
+	$C -od -rdynamic $^ $F
 t:t.c a.o z.o c.o
 	$C -ot $^ $F
 g:g.c c.o a.o z.o
 	$C -g -og $^ $F -Wno-unused-value
-h.so:h.c
-	$C -g -shared -oh.so -fPIC $< $F -Wno-unused-value
+h.so:h.c c.c
+	$C -g -shared -oh.so -fPIC $^ $F -Wno-unused-value
 k:k.edu/?.[ch] makefile
 	$C $K -ok k.edu/?.c -nostdlib $F
 k.h:

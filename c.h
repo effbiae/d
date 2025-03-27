@@ -5,6 +5,7 @@ void k_();U ku(i2,U),k(i2,U,U);
 _f(_r,ax?x:ku(0,x))_f(r_,ax?x:ku(1,x))
 #define rx r_(x)
 #define ra r_(a)
+#define rr r_(r)
 #undef sx
 #define sx ((i0*)ku(2,x))
 #define sr x(r,sx)
