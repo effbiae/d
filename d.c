@@ -20,6 +20,6 @@ f(t2s,A(!tx|tx==2);P(ax,en(x))Ur=ti('(');i(nx,r=cat(r,t2s(at(rx,i))))r=cat(r,ti(
 /*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(ad,U r=fi(*ed,x);r?p_(ed[x(r,ix)+1]):0)
 f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));0)
 f(dl,//pass a parse tree, get back its evaluation
- FILE*g=fopen("h.c","w");pf(g,pc("#include\"d.h\"\nU d(){return %;}\n",eg(x)));fclose(g);system("rm h.so;make h.so 2>&1|head");
+ FILE*g=fopen("h.c","w");pf(g,pc("#include\"d.h\"\nU d(){return %;}\n",eg(x)));fclose(g);system("rm -f h.so;make h.so 2>&1|head");
  void*l=dlopen("./h.so",RTLD_NOW);$(!l,O("%s\n",dlerror())); void(*ini)()=dlsym(l,"ini");ini(k,tn);U(*d)()=dlsym(l,"d");d())
 _Z(ini,k_();i(128,c[i]=' ')i(3,sd=m[i+1];W(*d)c[*d++]=m[0][i]);pt())int main(int n,i0**v){ini();print(dl(parse("4")));}
