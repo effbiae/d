@@ -17,7 +17,7 @@ _U(parse,Ux=cat(ti('('),p_(s));sb=sx;ns=nx;i=0;_x(t()),ss)
 /*parse test*/Z0*pts[][2]={{"","()"},{"0","0"},{"1+2","(+12)"},{"+/x","((/+)x)"},{"x[*i]'y","(('(x(*i)))y)"},{"!:'x","(('!:)x)"},{0}};
 f(t2s,A(!tx|tx==2);P(ax,en(x))Ur=ti('(');i(nx,r=cat(r,t2s(at(rx,i))))r=cat(r,ti(')'));_x(r))_Z(pt,i2 i=0;W(*pts[i])(Amat(t2s(parse(*pts[i])),p_(pts[i][1])),i++))
 /*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(ad,U r=fi(*ed,x);r?p_(ed[x(r,ix)+1]):0)
-U fns,fms;_Z(fn0,_r(fns);_r(fms);fns=el;fms=el)
+ZU fns,fms;_Z(fn0,$(fns,_r(fns);_r(fms));fns=el;fms=el)
 f(train,U p;Ua=fns;Ur=cat(p_("tr"),$i(ti(na)));fms=cat(fms,en(rr));
 		A(ax);
 		P(ax&&(p=v(ix)),U u=_2(rr,$i(p));fns=cat(fns,en(pc(ix>>8?"f(%,k(%,0,x))":"F(%,k(%,a,x))",u)));r);0)

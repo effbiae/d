@@ -19,7 +19,7 @@ t:t.c a.o z.o c.o
 	$C -ot $^ $F
 g:g.c c.o a.o z.o
 	$C -g -og $^ $F -Wno-unused-value
-h.so:h.c c.c
+h.so:h.c
 	$C -g -shared -oh.so -fPIC $^ $F -Wno-unused-value
 k:k.edu/?.[ch] makefile
 	$C $K -ok k.edu/?.c -nostdlib $F
