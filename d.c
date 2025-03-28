@@ -1,10 +1,9 @@
 #include"c.h"
 #include"P.h"
 #include<dlfcn.h>
-U strlen(const char*);int system(char*);
-#define O printf
 #undef t
 #define Pv(x,z) if(x){_(z);return;}
+U strlen(const char*);int system(char*);
 /*match*/F(mat,P(a=x,ti(1))in=1;$(ta-tx|(ax?ix-ia:na-nx),n=0);ii=0;W(n&&!ax&&i<nx){U m=mat(at(ra,i),at(rx,i));n=x(m,ix);i++;}_r(a);_x(ti(n));)
 /*str2ints*/_U(p_,in=strlen(s);Ur=tn(2,n);i2*p=sr;i(n,p[i]=*s++);r,ss)f($i,Z0 b[8];int n=sprintf(b,"%d",ix);A(n<8);p_(b))
 /*print*/_Z(pf,A(tx==2);i2*p=sx;i(nx,fputc((i0)p[i],f);$(p[i]>>8,fputc(':',f));)_x(fflush(f)),FILE*f,Ux)_Z(p1,Pv(ax,p1(en(x)))Pv(tx!=2,print(x);xx())pf(stdout,x),Ux)
@@ -19,7 +18,7 @@ _U(parse,Ux=cat(ti('('),p_(s));sb=sx;ns=nx;i=0;_x(t()),ss)
 /*parse test*/Z0*pts[][2]={{"","()"},{"0","0"},{"1+2","(+12)"},{"+/x","((/+)x)"},{"x[*i]'y","(('(x(*i)))y)"},{"!:'x","(('!:)x)"},{0}};
 f(t2s,A(!tx|tx==2);P(ax,en(x))Ur=ti('(');i(nx,r=cat(r,t2s(at(rx,i))))r=cat(r,ti(')'));_x(r))_Z(pt,i2 i=0;W(*pts[i])(Amat(t2s(parse(*pts[i])),p_(pts[i][1])),i++))
 /*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(ad,U r=fi(*ed,x);r?p_(ed[x(r,ix)+1]):0)
-U fns,fms;_Z(fn0,fns=el;fms=el)
+U fns,fms;_Z(fn0,_r(fns);_r(fms);fns=el;fms=el)
 f(train,U p;Ua=fns;Ur=cat(p_("tr"),$i(ti(na)));fms=cat(fms,en(rr));
 		A(ax);
 		P(ax&&(p=v(ix)),U u=_2(rr,$i(p));fns=cat(fns,en(pc(ix>>8?"f(%,k(%,0,x))":"F(%,k(%,a,x))",u)));r);0)
@@ -29,6 +28,7 @@ f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));
      A(na==2);A(ad(at(ra,0)));pc("%(%,%)",_3(ad(at(ra,0)),train(at(a,1)),eg(at(x,1)))))
 _U(fs,Ux=fns;Ua=fms;Ur=p_("");i(nx,r=cat(r,at(rx,i)));r)
 f(dl,//pass a parse tree, get back its evaluation
- FILE*g=fopen("h.c","w");U r=eg(x);pf(g,pc("#include\"c.h\"\n%\nU d(){return %;}\n",_2(fs(),r)));fclose(g);system("rm -f h.so;make h.so 2>&1|head");
- void*l=dlopen("./h.so",RTLD_NOW);$(!l,O("%s\n",dlerror()));U(*d)()=dlsym(l,"d");d())
-_Z(ini,k_();i(256,c[i]=' ')i(3,sd=mi[i+1];W(*d)c[*d++]=mi[0][i]);pt())int main(int n,i0**v){ini();/*while*/fn0();print(dl(parse("+/!5")));}
+ //p1(t2s(r_(x)));
+ FILE*g=fopen("h.c","w");U r=eg(x);pf(g,pc("#include\"c.h\"\n%\nU d(){return %;}\n",_2(fs(),r)));fclose(g);system("rm -f h.so;make h.so>/dev/null 2>&1");
+ static void*l;$(l,dlclose(l));l=dlopen("./h.so",RTLD_NOW);$(!l,printf("%s\n",dlerror()));U(*d)()=dlsym(l,"d");d())
+_Z(ini,k_();i(256,c[i]=' ')i(3,sd=mi[i+1];W(*d)c[*d++]=mi[0][i]);pt())int main(int n,i0**v){Z0 b[80];ini();W(fgets(b,80,stdin)){fn0();print(dl(parse(b)));}}

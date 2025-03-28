@@ -29,7 +29,7 @@ _.h:
 	ln -sf k.edu/_.h _.h
 test: d
 	python3 p.py
-	./c<t.in>t.out&&diff t.out t.check
-	./d
+	diff <(./c<t.in) t.check
+	f(){ head -3 $$1;}; diff <(f t.in|./d) <(f t.check)
 clean:
 	rm -f k t d g g.c *.o _.h k.h P P.h t.out -r __pycache__
