@@ -24,7 +24,7 @@ def t():
  return x
 def verb(x):#primitive or derived verb?
  if type(x)==str and len(x)>0:return c[x[0]]=='v'
- return len(x)>0 and type(x[0])==str and c[x[0][0]]=='a'
+ return len(x)>0 and type(x[0])==str and c[x[0]]=='a'
 def train(x):#is train? if a verb or projection or composition
  if verb(x):return 1
  if type(x)==tuple:
