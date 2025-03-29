@@ -28,18 +28,18 @@ def verb(x):#primitive or derived verb?
 def train(x):#is train? if a verb or projection or composition
  if verb(x):return 1
  if type(x)==tuple:
-  if len(x)==3 and x[0]=='o':return 1
+  if len(x)==3 and x[0]=="'":return 1
   if len(x)==3 and x[2]==():return 1
  return 0
 def o3(x):
- if train(x[2]):return('o',(x[0],x[1],()),x[2])
+ if train(x[2]):return("'",(x[0],x[1],()),x[2])
  return x
 def monad(x):
  if type(x)==str and c[x[0]]=='v':
   return x+':'
  return x
 def o2(x):
- if train(x[1]):return('o',monad(x[0]),x[1])
+ if train(x[1]):return("'",monad(x[0]),x[1])
  return x
 def v():return';'<cs(i-1)
 def e(x):
@@ -74,11 +74,11 @@ def test():
         [    '(+x)%y',('%', ('+', 'x'), 'y') ],
         [  '(+/x)%#x',('%', (('/', '+'), 'x'), ('#', 'x')) ],
         [ 'x+m[*i]/y',('+', 'x', (('/', ('m', ('*', 'i'))), 'y')) ],
-        [      '1+2-',('o',('+', '1', ()),('-', '2', ())) ],
+        [      '1+2-',("'",('+', '1', ()),('-', '2', ())) ],
         [     '3*:/2',(('/', '*:'), '3', '2') ],
-        [        '+-',('o', '+:', '-') ],
-        [       '3+-',('o', ('+', '3', ()),'-') ],
-        ['5(+\\|:)\\x',(('\\', ('o', ('\\', '+'), '|:')), '5', 'x') ],
+        [        '+-',("'", '+:', '-') ],
+        [       '3+-',("'", ('+', '3', ()),'-') ],
+        ['5(+\\|:)\\x',(('\\', ("'", ('\\', '+'), '|:')), '5', 'x') ],
         [    'f::x,0',('::', 'f', (',', 'x', '0')) ],
         ]:
         if (r:=parse(x))!=y:print('!',repr(x),repr(r),'!=',y);sys.exit(1)

@@ -11,7 +11,7 @@ def tr(x):
    else:assert(x[1]==':');fns[name]='f(%s,k(%s,0,x))'%(name,p)
   else:return x+'fun'
  else:
-  if a=='o':fns[name]='f(%s,%s(%s(x)))'%(name,tr(x[1]),tr(x[2]))
+  if a=="'":fns[name]='f(%s,%s(%s(x)))'%(name,tr(x[1]),tr(x[2]))
   else:
    if a in d:
     fns[name]='f(%s,%s(%s,x))'%(name,d[a],tr(x[1]))
