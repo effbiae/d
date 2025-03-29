@@ -30,6 +30,6 @@ _.h:
 test: d
 	python3 p.py
 	diff <(./c<t.in) t.check
-	f(){ head -4 $$1;}; diff <(f t.in|./d) <(f t.check)
+	f(){ head -5 $$1;}; diff <(f t.in|./d) <(f t.check)
 clean:
 	rm -f k t d g g.c *.o _.h k.h P P.h t.out -r __pycache__
