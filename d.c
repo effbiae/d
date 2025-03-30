@@ -30,7 +30,7 @@ f(tra,Ua=ax||nx<1?0:x0;U p=ax?v(x):0;Ur=pc("t%",en($i(ti(fni++))));
 	  )$(tx==2,_r(r);r=x);
 	 r)
 F(la,a=en(a);cfn(pc("f(%,%)",_2(ra,eg(x))));a)
-/* 1_ */f(one_,P(ax,tn(tx,0))P(!nx,x)Ur=el;ii=0;W(++i<nx)r=cat(r,en(at(rx,i)));_x(sqz(r)))
+/* 1_ */f(one_,P(ax,tn(tx,0))P(!nx,x)Ur=el;ii=0;W(++i<nx)r=cat(r,en(at(rx,i)));_x(r))
 /* ","/ */f(cj,P(ax,en(x))P(nx<2,x)ii=0;Ur=x0;W(++i<nx)r=cat(r,cat(ti(','),at(rx,i)));_x(r))
 f(eg,
      P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x))
