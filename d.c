@@ -21,8 +21,6 @@ _U(parse,Ux=cat(ti('['),p_(s));sb=sx;ns=nx;i=0;_x(t()),ss)
 f(t2s,A(!tx|tx==2);P(ax,ix>>8?cat(ti((i0)ix),ti(':')):en(x))Ur=ti('(');i(nx,r=cat(r,t2s(at(rx,i))))r=cat(r,ti(')'));_x(r))
 _Z(pt,Ux=mat(ti(1),ti(2));A(!ix);i2 i=0;W(*pts[i])(Amat(t2s(parse(*pts[i])),p_(pts[i][1])),i++))
 /*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(ad,U r=fi(*ed,x);r?p_(ed[x(r,ix)+1]):0)
-#define db(x) _(printf(__func__);p1(x))
-#define tb(x) db(t2s(x))
 ZU fns;static i2 fni;_Z(fn0,fni=0;fns=tn(2,0))ZU eg(Ux);_Z(cfn,fns=cat(fns,x),Ux)
 f(tra,Ua=ax||nx<1?0:at(rx,0);U p=ax?v(x):0;Ur=pc("t%",en($i(ti(fni++))));
 	$(p,U u=_2(rr,$i(p));cfn(pc(ix>>8?"f(%,k(%,0,x))":"F(%,k(%,a,x))",u)))
@@ -31,7 +29,7 @@ f(tra,Ua=ax||nx<1?0:at(rx,0);U p=ax?v(x):0;Ur=pc("t%",en($i(ti(fni++))));
 	           $(p=v(a),A(nx==3);cfn(pc("f(%,k(%,%,x))",_3(rr,$i(p),eg(at(x,1))))));//projection
 	  )$(tx==2,_x(r=x));
 	 r)
-F(la,A(aa);a=en(a);cfn(pc("f(%,%)",_2(ra,eg(x))));a)
+F(la,a=en(a);cfn(pc("f(%,%)",_2(ra,eg(x))));a)
 /* 1_ */f(one_,P(ax,tn(tx,0))P(!nx,x)Ur=el;ii=0;W(++i<nx)r=cat(r,en(at(rx,i)));_x(sqz(r)))
 /* ","/ */f(cj,P(ax,en(x))P(nx<2,x)ii=0;Ur=at(rx,0);W(++i<nx)r=cat(r,cat(ti(','),at(rx,i)));_x(r))
 f(eg,
