@@ -21,8 +21,8 @@ _U(parse,Ux=cat(ti('('),p_(s));sb=sx;ns=nx;i=0;_x(t()),ss)
 f(t2s,A(!tx|tx==2);P(ax,ix>>8?cat(ti((i0)ix),ti(':')):en(x))Ur=ti('(');i(nx,r=cat(r,t2s(at(rx,i))))r=cat(r,ti(')'));_x(r))
 _Z(pt,Ux=mat(ti(1),ti(2));A(!ix);i2 i=0;W(*pts[i])(Amat(t2s(parse(*pts[i])),p_(pts[i][1])),i++))
 /*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(ad,U r=fi(*ed,x);r?p_(ed[x(r,ix)+1]):0)
-ZU fns,fms;static i2 fni;_Z(fn0,fni=0;$(fns,_r(fns);_r(fms));fns=el;fms=el)ZU eg(Ux);_Z(cfn,fns=cat(fns,en(x)),Ux)
-f(tra,Ua=ax||nx<1?0:at(rx,0);U p=ax?v(x):0;Ur=pc("t%",en($i(ti(fni++))));fms=cat(fms,en(rr));
+ZU fns;static i2 fni;_Z(fn0,fni=0;$(fns,_r(fns));fns=el)ZU eg(Ux);_Z(cfn,fns=cat(fns,en(x)),Ux)
+f(tra,Ua=ax||nx<1?0:at(rx,0);U p=ax?v(x):0;Ur=pc("t%",en($i(ti(fni++))));
 	$(p,U u=_2(rr,$i(p));cfn(pc(ix>>8?"f(%,k(%,0,x))":"F(%,k(%,a,x))",u)))
 	 $(a&&aa,$(fi("'",a),cfn(pc("f(%,%(%(x)))",_3(rr,tra(at(rx,1)),tra(at(x,2))))))//composition
 		  $(p=ad(a),cfn(pc("f(%,%(%,x))",_3(rr,p,tra(at(x,1))))))//adverb
@@ -32,10 +32,10 @@ f(tra,Ua=ax||nx<1?0:at(rx,0);U p=ax?v(x):0;Ur=pc("t%",en($i(ti(fni++))));fms=cat
 f(eg,
      P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x));
      A(!ax&&nx);Ua=at(rx,0);U p=aa?v(a):0;
-     P(p,U t=_2($i(p),eg(at(rx,1)));nx==2?_x(pc("k(%,0,%)",t)):pc("k(%,%,%)",cat(t,en(eg(at(x,2))))))
      $(na==2,P(nx==2,pc("%(%,%)",_3(ad(at(ra,0)),tra(at(a,1)),eg(at(x,1)))))
 	     P(nx==3,fi("\\",at(ra,0))?pc("niters(%,%,%)",_3(tra(at(a,1)),at(rx,1),eg(at(x,2)))):(p1(pc("no dyadic %",en(at(a,0)))),_r(x),0))
-     )P(1,pc("%(%)",_2(tra(a),eg(at(x,1)))))A(0);0)
+     )P(1,U t=_2(tra(a),eg(at(rx,1)));nx==2?_x(pc("%(%)",t)):pc("%(%,%)",cat(t,en(eg(at(x,2))))))
+     A(0);0)
 _U(fs,Ux=fns;Ur=p_("");i(nx,r=cat(r,at(rx,i)));r)
 f(dl,//pass a parse tree, get back its evaluation
  FILE*g=fopen("h.c","w");U r=eg(x);pf(g,pc("#include\"c.h\"\n%\nU d(){return %;}\n",_2(fs(),r)));fclose(g);system("rm -f h.so;make h.so>/dev/null 2>&1");
