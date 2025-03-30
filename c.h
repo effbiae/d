@@ -6,6 +6,10 @@ _f(_r,ax?x:ku(0,x))_f(r_,ax?x:ku(1,x))
 #define rx r_(x)
 #define ra r_(a)
 #define rr r_(r)
+#define x0 at(rx,0)
+#define x1 at(rx,1)
+#undef x2
+#define x2 at(rx,2)
 #undef sx
 #define sx ((i0*)ku(2,x))
 #define sr x(r,sx)
