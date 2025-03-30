@@ -39,7 +39,7 @@ f(eg,
      P(aa&&(i0)ia==':'&&ia>>8,A(nx==3);_x(la(x1,x2)))
      P(aa&&ia=='[',pc("(%)",cj(each(eg,one_(x)))))
      $(na==2,P(nx==2,pc("%(%,%)",_3(ad(at(ra,0)),tra(at(a,1)),eg(_x(x1)))))
-	     P(nx==3,fi("\\",at(ra,0))?pc("niters(%,%,%)",_3(tra(at(a,1)),x1,eg(_x(x2)))):_x(p1(pc("no dyadic %",en(at(a,0))));0))
+	     P(nx==3,_x(fi("\\",at(ra,0))?pc("niters(%,%,%)",_3(tra(at(a,1)),x1,eg(x2))):p1(pc("no dyadic %",en(at(a,0))));0))
      )P(train(ra),U t=_2(tra(a),eg(x1));_x(nx==2?pc("%(%)",t):pc("%(%,%)",cat(t,en(eg(x2))))))
      0
      )
