@@ -31,12 +31,12 @@ f(tra,Ua=ax||nx<1?0:at(rx,0);U p=ax?v(x):0;Ur=pc("t%",en($i(ti(fni++))));
 	           $(p=v(a),A(nx==3);cfn(pc("f(%,k(%,%,x))",_3(rr,$i(p),eg(at(x,1))))));//projection
 	  )$(tx==2,_x(r=x));
 	 r)
-F(la,a=aa?en(a):a;cfn(pc("f(%,%)",_2(ra,eg(x))));a)
-f(one_,P(ax,tn(tx,0))P(!nx,x)Ur=el;ii=0;W(++i<nx)r=cat(r,en(at(rx,i)));_x(sqz(r)))
-f(cj,P(ax,en(x))P(nx<2,x)ii=0;Ur=at(rx,0);W(++i<nx)r=cat(r,cat(ti(','),at(rx,i)));_x(r))
+F(la,A(aa);a=en(a);cfn(pc("f(%,%)",_2(ra,eg(x))));a)
+/* 1_ */f(one_,P(ax,tn(tx,0))P(!nx,x)Ur=el;ii=0;W(++i<nx)r=cat(r,en(at(rx,i)));_x(sqz(r)))
+/* ","/ */f(cj,P(ax,en(x))P(nx<2,x)ii=0;Ur=at(rx,0);W(++i<nx)r=cat(r,cat(ti(','),at(rx,i)));_x(r))
 f(eg,
      P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x))
-     P(ax,A(tx==2);pc("r_(%)",en(en(x))))
+     P(ax,pc("r_(%)",en(en(x))))
      A(!ax&&nx);Ua=at(rx,0);
      P(aa&&(i0)ia==':'&&ia>>8,A(nx==3);la(at(x,1),at(x,2)))
      P(aa&&ia=='[',Ur=cj(each(eg,one_(rx)));pc("(%)",r))
