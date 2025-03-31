@@ -20,7 +20,7 @@ _f(_r,ax?x:ku(0,x))_f(r_,ax?x:ku(1,x))
 #define Ur U r
 #define Urp(n) Ur=tn(0,n);U*p=sr
 _U(xx,volatile U*p=0;*p)
-_U(at,P(i>=nx,xx());P(!tx,U*p=sx;_x(r_(p[i])))k(12,x,ti(i)),Ux,ii)
+_U(at,P(!ax&&i>=nx,xx());P(!tx,U*p=sx;_x(r_(p[i])))k(12,x,ti(i)),Ux,ii)
 f(en,P(!ax,Urp(1);p[0]=x;r)k(17,0,x)) //bug in en when !ax..
 #define xat(b) static i2 b##at(Ux,i2 i){U a=at(r_(x),i);i2 r=x(a,b##x);_r(a);return r;}
 xat(t)xat(a)f(sqz,P(ax||tx||!nx,x)i2 t=tat(x,0);i(nx,P(!aat(x,i)||t!=tat(x,i),x))U r=tn(t,nx);i2*p=sr;U*q=sx;i(nx,p[i]=*(i2*)(q+i));_r(x);r;)
