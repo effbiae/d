@@ -33,9 +33,7 @@ F(la,a=en(a);cfn(pc("f(%,%)",_2(ra,eg(x))));a)
 /* 1_ */f(one_,P(ax,tn(tx,0))P(!nx,x)Ur=el;ii=0;W(++i<nx)r=cat(r,en(at(rx,i)));_x(r))
 /* ","/ */f(cj,P(ax,en(x))P(nx<2,x)ii=0;Ur=x0;W(++i<nx)r=cat(r,cat(ti(','),at(rx,i)));_x(r))
 f(eg,
-     P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x))
-     P(ax,pc("r_(%)",x))
-     A(!ax&&nx);Ua=x0;
+     P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x))P(ax,pc("r_(%)",x))Ua=x0;
      P(aa&&(i0)ia==':'&&ia>>8,A(nx==3);_x(la(x1,x2)))
      P(aa&&ia=='[',pc("(%)",cj(each(eg,one_(x)))))
      $(na==2,P(nx==2,_x(pc("%(%,%)",_3(ad(at(ra,0)),tra(at(a,1)),eg(x1)))))
