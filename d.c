@@ -16,8 +16,6 @@ f(tra,Ua=ax||nx<1?0:x0;U p=ax?v(x):0;Ur=pc("t%",en($i(ti(fni++))));
 	           $(p=v(a),A(nx==3);_x(fn("f(%,k(%,%,x))",_3(rr,$i(p),eg(x1)))));//projection
 	  )$(tx==2,_r(r);r=x);r)
 F(la,a=en(a);fn("f(%,%)",_2(ra,eg(x)));a)
-/* 1_ */f(one_,P(ax,tn(tx,0))P(!nx,x)Ur=el;ii=0;W(++i<nx)r=cat(r,en(at(rx,i)));_x(r))
-/* ","/ */f(cj,P(ax,en(x))P(nx<2,x)ii=0;Ur=x0;W(++i<nx)r=cat(r,cat(ti(','),at(rx,i)));_x(r))
 f(eg,
      P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x))P(ax,pc("r_(%)",x))Ua=x0;P(aa&&(i0)ia==':'&&ia>>8,A(nx==3);_x(la(x1,x2)))P(aa&&ia=='[',pc("(%)",cj(each(eg,one_(x)))))
      $(na==2,P(nx==2,_x(pc("%(%,%)",_3(ad(at(ra,0)),tra(at(a,1)),eg(x1)))))

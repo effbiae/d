@@ -32,4 +32,4 @@ test: d
 	diff <(./c<t.in) t.check
 	diff <(./d<t.in) t.check
 clean:
-	rm -f k t d g g.c *.o _.h k.h P P.h t.out -r __pycache__
+	rm -f k t d g g.c h.c h.so *.o _.h k.h P P.h t.out -r __pycache__

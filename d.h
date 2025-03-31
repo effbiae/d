@@ -13,4 +13,5 @@ U strlen(const char*);
        {"!:'x","(('!:)x)"},{"1+2-","('(+1())(-2()))"},{"+-","('+:-)"},{"(+/|:)/x","((/('(/+)|:))x)"},{0}};
 f(t2s,A(!tx|tx==2);P(ax,ix>>8?cat(ti((i0)ix),ti(':')):en(x))Ur=ti('(');i(nx,r=cat(r,t2s(at(rx,i))))r=cat(r,ti(')'));_x(r))
 static U parse(ss);_Z(pt,Ux=mat(ti(1),ti(2));A(!ix);i2 i=0;W(*pts[i])(Amat(t2s(parse(*pts[i])),p_(pts[i][1])),i++))
-
+/* 1_ */f(one_,P(ax,tn(tx,0))P(!nx,x)Ur=el;ii=0;W(++i<nx)r=cat(r,en(at(rx,i)));_x(r))
+/* ","/ */f(cj,P(ax,en(x))P(nx<2,x)ii=0;Ur=x0;W(++i<nx)r=cat(r,cat(ti(','),at(rx,i)));_x(r))
