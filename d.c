@@ -11,13 +11,12 @@ _U(parse,Ux=cat(ti('['),p_(s));sb=sx;ns=nx;i=0;_x(t()),ss)
 ZU fns;static i2 fni;_Z(fn0,fni=0;fns=tn(2,0))ZU eg(Ux);_U(fn,fns=cat(fns,pc(s,x)),ss,Ux)
 f(tra,Ua=ax||nx<1?0:x0;U p=ax?v(x):0;Ur=pc("t%",en($i(ti(fni++))));
 	$(p,U u=_2(rr,$i(p));fn(ix>>8?"f(%,k(%,0,x))":"F(%,k(%,a,x))",u))
-	 $(a&&aa,$(fi("'",a),_x(fn("f(%,%(%(x)))",_3(rr,tra(x1),tra(x2)))))//composition
+	 $(a&&aa,$(fi("'",a)&&nx==3,_x(fn("f(%,%(%(x)))",_3(rr,tra(x1),tra(x2)))))//composition
 		  $(p=ad(a),_x(fn("f(%,%(%,x))",_3(rr,p,tra(x1)))))//adverb
 	           $(p=v(a),A(nx==3);_x(fn("f(%,k(%,%,x))",_3(rr,$i(p),eg(x1)))));//projection
 	  )$(tx==2,_r(r);r=x);r)
 F(la,a=en(a);fn("f(%,%)",_2(ra,eg(x)));a)
-f(eg,
-     P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x))P(ax,pc("r_(%)",x))Ua=x0;P(aa&&(i0)ia==':'&&ia>>8,A(nx==3);_x(la(x1,x2)))P(aa&&ia=='[',pc("(%)",cj(each(eg,one_(x)))))
+f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x))P(ax,pc("r_(%)",x))Ua=x0;P(aa&&(i0)ia==':'&&ia>>8,A(nx==3);_x(la(x1,x2)))P(aa&&ia=='[',pc("(%)",cj(each(eg,one_(x)))))
      $(na==2,P(nx==2,_x(pc("%(%,%)",_3(ad(at(ra,0)),tra(at(a,1)),eg(x1)))))
 	     P(nx==3,_x(fi("\\",at(ra,0))?pc("niters(%,%,%)",_3(tra(at(a,1)),x1,eg(x2))):(p1(pc("no dyadic %",at(a,0))),0)))
      )P(train(ra),U t=_2(tra(a),eg(x1));_x(nx==2?pc("%(%)",t):pc("%(%,%)",cat(t,en(eg(x2))))))0)
