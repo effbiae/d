@@ -14,9 +14,9 @@ f(ct,/*compile train*/Ua=ax||nx<1?0:x0;U p=ax?v(x):0;P(!p&&!a,x);Ur=pc("t%",en($
  $(p=ad(a),/*adverb*/_x(fn("f(%,%(%,x))",_3(rr,p,ct(x1)))))$(p=v(a),/*projection*/_x(fn("f(%,k(%,%,x))",_3(rr,$i(p),eg(x1))))); r)
 F(la,a=en(a);fn("f(%,%)",_2(ra,eg(x)));a)
 f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x))P(ax,pc("r_(%)",x))Ua=x0;P(aa&&(i0)ia==':'&&ia>>8,A(nx==3);_x(la(x1,x2)))P(aa&&ia=='[',pc("(%)",cj(each(eg,one_(x)))))
-     $(na==2,P(nx==2,_x(pc("%(%,%)",_3(ad(at(ra,0)),ct(at(a,1)),eg(x1)))))
-	     P(nx==3,_x(fi("\\",at(ra,0))?pc("niters(%,%,%)",_3(ct(at(a,1)),x1,eg(x2))):(p1(pc("no dyadic %",at(a,0))),0)))
-     )P(train(ra),U t=_2(ct(a),eg(x1));_x(nx==2?pc("%(%)",t):pc("%(%,%)",cat(t,en(eg(x2))))))0)
+ $(na==2,P(nx==2,_x(pc("%(%,%)",_3(ad(at(ra,0)),ct(at(a,1)),eg(x1)))))
+         P(nx==3,_x(fi("\\",at(ra,0))?pc("niters(%,%,%)",_3(ct(at(a,1)),x1,eg(x2))):(p1(pc("no dyadic %",at(a,0))),0)))
+   )P(train(ra),U t=_2(ct(a),eg(x1));_x(nx==2?pc("%(%)",t):pc("%(%,%)",cat(t,en(eg(x2))))))0)
 int system(char*);f(dl,//pass a parse tree, get back its evaluation
  FILE*g=fopen("h.c","w");U e=eg(x);pf(g,pc("#include\"c.h\"\n%\nU d(){return %;}\n",_2(fns,e)));fclose(g);system("rm -f h.so;make h.so>/dev/null 2>&1");
  static void*l;$(l,dlclose(l));l=dlopen("./h.so",RTLD_NOW);$(!l,printf("%s\n",dlerror()));U(*d)()=dlsym(l,"d");d())
