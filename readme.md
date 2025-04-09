@@ -6,7 +6,7 @@ d is a port to c of p.py and c
 ```
 $ git clone --recursive https://github.com/effbiae/c.git   #recursive to get the k.edu submodule
 $ cd c
-# make
+$ make
 $ ./c
  !3
 0 1 2
