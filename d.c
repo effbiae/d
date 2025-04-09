@@ -9,18 +9,18 @@ _U(t,P(q(),el)Ux=!fi("([",s(i))?n():(x=E(ti(s(i))),3>nx)?_(A(nx>1);_x(x1)):x;W('
 _U(parse,Ux=cat(ti('['),p_(s));sb=sx;ns=nx;i=0;_x(t()),ss)
 /*gen*/Z0*ed[4]={"\\/'","scan","over","each"};f(ad,U r=fi(*ed,x);r?p_(ed[x(r,ix)+1]):0)
 ZU fns;static i2 fni;_Z(fn0,fni=0;fns=tn(2,0))ZU eg(U);_U(fn,fns=cat(fns,pc(s,x)),ss,Ux)
-f(tg,Ua=ax||nx<1?0:x0;U p=ax?v(x):0;Ur=pc("t%",en($i(ti(fni++))));
+f(tg,Ua=ax||nx<1?0:x0;U p=ax?v(x):0;P(!p&&!a,x);Ur=pc("t%",en($i(ti(fni++))));
 	$(p,fn(ix>>8?"f(%,k(%,0,x))":"F(%,k(%,a,x))",_2(rr,$i(p))))
 	 $(a&&aa,$(fi("'",a)&&nx==3,_x(fn("f(%,%(%(x)))",_3(rr,tg(x1),tg(x2)))))//composition
 		  $(p=ad(a),_x(fn("f(%,%(%,x))",_3(rr,p,tg(x1)))))//adverb
 	           $(p=v(a),A(nx==3);_x(fn("f(%,k(%,%,x))",_3(rr,$i(p),eg(x1)))));//projection
-	  )$(tx==2,_r(r);r=x);r)
+	  );r)
 F(la,a=en(a);fn("f(%,%)",_2(ra,eg(x)));a)
 f(eg,P(ax&&ix>='0'&&ix<='9',pc("ti(%)",x))P(ax,pc("r_(%)",x))Ua=x0;P(aa&&(i0)ia==':'&&ia>>8,A(nx==3);_x(la(x1,x2)))P(aa&&ia=='[',pc("(%)",cj(each(eg,one_(x)))))
      $(na==2,P(nx==2,_x(pc("%(%,%)",_3(ad(at(ra,0)),tg(at(a,1)),eg(x1)))))
 	     P(nx==3,_x(fi("\\",at(ra,0))?pc("niters(%,%,%)",_3(tg(at(a,1)),x1,eg(x2))):(p1(pc("no dyadic %",at(a,0))),0)))
      )P(train(ra),U t=_2(tg(a),eg(x1));_x(nx==2?pc("%(%)",t):pc("%(%,%)",cat(t,en(eg(x2))))))0)
 int system(char*);f(dl,//pass a parse tree, get back its evaluation
- FILE*g=fopen("h.c","w");U r=eg(x);pf(g,pc("#include\"c.h\"\n%\nU d(){return %;}\n",_2(fns,r)));fclose(g);system("rm -f h.so;make h.so>/dev/null 2>&1");
+ FILE*g=fopen("h.c","w");U e=eg(x);pf(g,pc("#include\"c.h\"\n%\nU d(){return %;}\n",_2(fns,e)));fclose(g);system("rm -f h.so;make h.so>/dev/null 2>&1");
  static void*l;$(l,dlclose(l));l=dlopen("./h.so",RTLD_NOW);$(!l,printf("%s\n",dlerror()));U(*d)()=dlsym(l,"d");d())
 _Z(ini,k_();i(256,c[i]=' ')i(3,sd=mi[i+1];W(*d)c[*d++]=mi[0][i]);pt())int main(int n,i0**v){Z0 b[80];ini();W(fgets(b,80,stdin)){fn0();print(dl(parse(b)));}}
