@@ -1,6 +1,5 @@
 #include"c.h"
 #include"P.h"
-#include<dlfcn.h>
 #undef t
 U strlen(const char*);
 /*str2ints*/_U(p_,in=strlen(s);Ur=tn(2,n);i2*p=sr;i(n,p[i]=*s++);r,ss)f($i,Z0 b[8];int n=sprintf(b,"%d",ix);A(n<8);p_(b))
